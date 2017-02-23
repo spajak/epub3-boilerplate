@@ -1,0 +1,15 @@
+body {
+    font-size: 1em;
+}
+
+p {
+    margin: 1em 0;
+}
+
+p.dialog {
+    margin: 0.5em 0;
+}
+
+section.titlepage {
+    text-align: center;
+}

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://www.idpf.org/2007/opf" unique-identifier="pub-id" version="3.1">
+    <metadata xmlns:dc="http://purl.org/dc/elements/1.1/">
+        <!-- https://www.uuidgenerator.net [Version 4] -->
+        <dc:identifier id="pub-id" scheme="uuid">ff375c52-1160-4dc2-9d41-324277b8c78f</dc:identifier>
+        <dc:language>pl</dc:language>
+
+        <dc:title file-as="Title, The Book's">The Book's Title</dc:title>
+        <dc:creator file-as="Author, The Book's" role="aut">The Book's Author</dc:creator>
+        <dc:date>2017-03-01</dc:date>
+
+        <!--
+        <dc:publisher></dc:publisher>
+        <dc:identifier scheme="isbn"></dc:identifier>
+        -->
+    </metadata>
+    <manifest>
+        <item href="cover.jpg" id="cover-image" media-type="image/jpeg" properties="cover-image"/>
+        <item href="style.css" id="css" media-type="text/css"/>
+
+        <item href="frontmatter.xhtml" id="frontmatter" media-type="application/xhtml+xml"/>
+        <item href="toc.xhtml" id="toc" media-type="application/xhtml+xml" properties="nav"/>
+        <item href="bodymatter.xhtml" id="bodymatter" media-type="application/xhtml+xml"/>
+        <item href="backmatter.xhtml" id="backmatter" media-type="application/xhtml+xml"/>
+    </manifest>
+    <spine>
+        <itemref idref="frontmatter"/>
+        <itemref idref="toc"/>
+        <itemref idref="bodymatter"/>
+        <itemref idref="backmatter"/>
+    </spine>
+</package>
