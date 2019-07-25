@@ -8,10 +8,10 @@
         <dc:title id="title" file-as="Book's Title, The">The Book's Title</dc:title>
         <meta refines="#title" property="file-as">Book's Title, The</meta>
         <dc:creator id="creator" file-as="Author, The Book's" role="aut">The Book's Author</dc:creator>
-        <dc:description xml:lang="en">Very good book about everything what is in The Universe</dc:description>
-        <dc:description xml:lang="pl">Świetna książka o wszystkich rzeczach we Wszechświecie</dc:description>
         <meta refines="#creator" property="role" scheme="marc:relators">aut</meta>
         <meta refines="#creator" property="file-as">Author, The Book's</meta>
+        <dc:description xml:lang="en">Very good book about everything what is in The Universe</dc:description>
+        <dc:description xml:lang="pl">Świetna książka o wszystkich rzeczach we Wszechświecie</dc:description>
         <dc:date>2017-03-01</dc:date>
         <dc:publisher>Some Publisher</dc:publisher>
         <dc:subject>Popular science</dc:subject>
