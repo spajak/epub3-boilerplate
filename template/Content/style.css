@@ -7,13 +7,6 @@ p {
     text-align: justify;
 }
 
-hr {
-    height: 1px;
-    padding: 0;
-    background-color: #888;
-    border: 0 none;
-}
-
 p.dialog {
     margin: 0.5em 0;
 }
@@ -28,6 +21,12 @@ ul li.no-bullet {
 
 .separator:before {
     content: '\2014\0020\002F\002F\0020\2014';
+}
+
+hr.separator {
+    text-align: center;
+    padding: 0;
+    border: 0 none;
 }
 
 .thumbs > * {
