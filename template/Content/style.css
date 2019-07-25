@@ -7,10 +7,36 @@ p {
     text-align: justify;
 }
 
+hr {
+    height: 1px;
+    padding: 0;
+    background-color: #888;
+    border: 0 none;
+}
+
 p.dialog {
     margin: 0.5em 0;
 }
 
 section.titlepage {
     text-align: center;
+}
+
+ul li.no-bullet {
+    list-style-type: none;
+}
+
+.separator:before {
+    content: '\2014\0020\002F\002F\0020\2014';
+}
+
+.thumbs > * {
+    margin-right: 3px;
+}
+
+.image {
+    text-align: center;
+    page-break-before: always;
+    page-break-after: always;
+    page-break-inside: avoid;
 }
