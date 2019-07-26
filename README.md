@@ -26,4 +26,8 @@ Use it as `<meta property="schema:wordCount">xxx</meta>` metadata field.
 
 ## Validation
 
-[`epubcheck`](https://github.com/w3c/epubcheck) gives errors about some metadata attributes. But these are provided to fully support Callibre.
+[`epubcheck`](https://github.com/w3c/epubcheck)
+```
+Validating using EPUB version 3.2 rules.
+No errors or warnings detected.
+```

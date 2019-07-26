@@ -21,7 +21,7 @@
         <dc:identifier>urn:isbn:9781566199094</dc:identifier>
         <dc:identifier>urn:lubimyczytac:49027</dc:identifier>
         <dc:contributor>Sebastian Pająk</dc:contributor>
-        <!-- Provide read time. An adult reads about 250 words per minute on an average -->
+        <!-- Read time tip: an adult reads about 250 words per minute on an average -->
         <meta property="schema:wordCount">1911</meta>
         <meta property="schema:numberOfPages">10</meta>
     </metadata>
