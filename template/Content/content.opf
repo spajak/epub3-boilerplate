@@ -2,23 +2,24 @@
 <package xmlns="http://www.idpf.org/2007/opf" unique-identifier="pub-id" version="3.0">
     <!-- https://www.w3.org/publishing/epub32/epub-packages.html -->
     <metadata xmlns:dc="http://purl.org/dc/elements/1.1/">
-        <dc:identifier id="pub-id" scheme="uuid">urn:uuid:ff375c52-1160-4dc2-9d41-324277b8c78f</dc:identifier>
+        <dc:identifier id="pub-id">urn:uuid:ff375c52-1160-4dc2-9d41-324277b8c78f</dc:identifier>
         <meta property="dcterms:modified">2019-07-25T18:00:00Z</meta>
         <dc:source>https://www.example.com/original-article.html</dc:source>
         <dc:language>en</dc:language>
-        <dc:title id="title" file-as="Book's Title, The">The Book's Title</dc:title>
+        <dc:title id="title">The Book's Title</dc:title>
         <meta refines="#title" property="file-as">Book's Title, The</meta>
-        <dc:creator id="creator" file-as="Author, The Book's" role="aut">The Book's Author</dc:creator>
-        <meta refines="#creator" property="role" scheme="marc:relators">aut</meta>
+        <meta refines="#title" property="alternate-script" xml:lang="pl">Alternatywny tytuł książki</meta>
+        <dc:creator id="creator">The Book's Author</dc:creator>
         <meta refines="#creator" property="file-as">Author, The Book's</meta>
+        <meta refines="#creator" property="role" scheme="marc:relators">aut</meta>
         <dc:description xml:lang="en">Very good book about everything what is in The Universe</dc:description>
         <dc:description xml:lang="pl">Świetna książka o wszystkich rzeczach we Wszechświecie</dc:description>
         <dc:date>2017-03-01</dc:date>
         <dc:publisher>Some Publisher</dc:publisher>
         <dc:subject>Popular science</dc:subject>
         <dc:subject>Biology</dc:subject>
-        <dc:identifier scheme="isbn">urn:isbn:9781566199094</dc:identifier>
-        <dc:identifier scheme="lubimyczytac">urn:lubimyczytac:49027</dc:identifier>
+        <dc:identifier>urn:isbn:9781566199094</dc:identifier>
+        <dc:identifier>urn:lubimyczytac:49027</dc:identifier>
         <dc:contributor>Sebastian Pająk</dc:contributor>
         <!-- Provide read time. An adult reads about 250 words per minute on an average -->
         <meta property="schema:wordCount">1911</meta>
