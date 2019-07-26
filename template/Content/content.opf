@@ -4,7 +4,8 @@
     <metadata xmlns:dc="http://purl.org/dc/elements/1.1/">
         <dc:identifier id="pub-id" scheme="uuid">urn:uuid:ff375c52-1160-4dc2-9d41-324277b8c78f</dc:identifier>
         <meta property="dcterms:modified">2019-07-25T18:00:00Z</meta>
-        <dc:language>pl</dc:language>
+        <dc:source>https://www.example.com/original-article.html</dc:source>
+        <dc:language>en</dc:language>
         <dc:title id="title" file-as="Book's Title, The">The Book's Title</dc:title>
         <meta refines="#title" property="file-as">Book's Title, The</meta>
         <dc:creator id="creator" file-as="Author, The Book's" role="aut">The Book's Author</dc:creator>
