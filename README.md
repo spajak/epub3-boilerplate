@@ -4,7 +4,7 @@
 
 ## Usage
 
-In orther to build this ebook [`7za`](https://www.7-zip.org/download.html) must be installed. To generate also `mobi` format, install [KindleGen](https://www.amazon.com/gp/feature.html?ie=UTF8&docId=1000765211).
+In order to build this ebook [`7za`](https://www.7-zip.org/download.html) must be installed. To generate also `mobi` format, install [KindleGen](https://www.amazon.com/gp/feature.html?ie=UTF8&docId=1000765211).
 
 PowerShell:
 
