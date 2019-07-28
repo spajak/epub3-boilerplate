@@ -1,6 +1,6 @@
 # epub3-boilerplate ebook template
 
-[EPUB version 3.2](https://www.w3.org/publishing/epub32/epub-spec.html) template.
+[EPUB version 3.2](https://www.w3.org/publishing/epub32/epub-spec.html) template with simplistic, yet universal `css` stylesheet.
 
 ## Usage
 
@@ -16,7 +16,7 @@ The output are two files: `template.epub` and `template.mobi` for Kindle.
 
 ## Bonus: reading time
 
-Nice feature is to have a reading time. This can be calculated as number of words divided by an averange reading speed (250 words per minute for an adult). To get the number of words use my PHP script:
+Nice feature is to have a reading time hint. This can be calculated as number of words divided by an averange reading speed (250 words per minute for an adult). To get the number of words use my PHP script:
 
 ```
 $ php ./count-words.php "./template/Content/ch0?.xhtml"
