@@ -15,7 +15,7 @@ p {
 /* Micro guide for most common inline tags:
     <em>       - stress emphasis
     <i>        - technical terms, foreign language phrases, thoughts etc.
-    <q>        - quotation
+    <q>        - quotation (adds quotes)
     <cite>     - title of a cited work
     <small>    - smaller text
     <strong>   - strong importance, seriousness, or urgency
@@ -142,15 +142,15 @@ ul li.no-bullet {
 }
 
 .small {
-    font-size: 0.8125em;
+    font-size: 0,875em;
 }
 
 .smaller {
-    font-size: 0.75em;
+    font-size: 0.8125em;
 }
 
 .tiny {
-    font-size: 0.675em;
+    font-size: 0.75em;
 }
 
 /* Table caption (must be the first element in <table>) */
