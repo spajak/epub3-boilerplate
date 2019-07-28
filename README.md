@@ -31,3 +31,10 @@ Use it as `<meta property="schema:wordCount">xxx</meta>` metadata field.
 Validating using EPUB version 3.2 rules.
 No errors or warnings detected.
 ```
+
+## Useful links
+
+ - [EPUB Packages 3.2](https://www.w3.org/publishing/epub32/epub-packages.html)
+ - [EPUB Content Documents 3.2](https://www.w3.org/publishing/epub32/epub-contentdocs.html)
+ - [EPUB 3 Structural Semantics Vocabulary](https://idpf.github.io/epub-vocabs/structure/)
+ - [DCMI Metadata Terms](http://www.dublincore.org/specifications/dublin-core/dcmi-terms/)
