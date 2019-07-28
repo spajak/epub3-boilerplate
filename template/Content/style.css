@@ -2,40 +2,168 @@ body {
     font-size: 1em;
 }
 
+section, .section {
+    page-break-before: always;
+    page-break-after: always;
+}
+
 p {
     margin: 1em 0;
     text-align: justify;
 }
 
-p.dialog {
-    margin: 0.5em 0;
+/* Micro guide for most common inline tags:
+    <em>       - stress emphasis
+    <i>        - technical terms, foreign language phrases, thoughts etc.
+    <q>        - quotation
+    <small>    - smaller text
+    <strong>   - strong importance, seriousness, or urgency
+    <sub>      - subscript
+    <sup>      - superscript
+*/
+
+hr {
+    height: 1px;
+    border: 0 none;
+    padding: 0;
+    margin: 1em 0;
+    background-color: #666;
 }
 
-section.titlepage {
+blockquote {
+    margin: 1em 0 1em 2%;
+    padding-left: 2%;
+    border-left: 2px solid #666;
+    text-align: justify;
+}
+
+ol, ul {
+    margin: 1em 0;
+}
+
+table {
+    border-collapse: collapse;
+    border: 0 none;
+    text-align: center;
+    width: 100%;
+    margin: 1em 0;
+    page-break-inside: avoid;
+    break-inside: avoid;
+}
+
+td, th {
+    padding: 1.25%;
+    border: 1px solid #666;
+    text-align: center;
+    vertical-align: middle;
+    page-break-inside: avoid;
+    break-inside: avoid;
+}
+
+caption {
+    text-align: justify;
+}
+
+figure {
+    margin: 1em 0;
+    page-break-inside: avoid;
+    break-inside: avoid;
     text-align: center;
 }
+
+figcaption {
+    text-align: left;
+}
+
+/* https://friendsofepub.github.io/eBookTricks */
+sub {
+    font-size: 0.675em;
+    line-height: 1.2;
+    vertical-align: sub;
+    vertical-align: -20%;
+}
+
+sup {
+    font-size: 0.675em;
+    line-height: 1.2;
+    vertical-align: super;
+    vertical-align: 35%;
+}
+
+/* --------- Custom classes ------------------------------------------------- */
 
 ul li.no-bullet {
     list-style-type: none;
 }
 
-.separator:before {
-    content: '\2014\0020\002F\002F\0020\2014';
-}
-
-hr.separator {
-    text-align: center;
-    padding: 0;
-    border: 0 none;
-}
-
-.thumbs > * {
-    margin-right: 3px;
-}
-
-.image {
-    text-align: center;
+.brb {
     page-break-before: always;
+}
+
+.bra {
     page-break-after: always;
-    page-break-inside: avoid;
+}
+
+.m {
+    margin: 1em 0;
+}
+
+.mt {
+    margin-top: 1em;
+}
+
+.mb {
+    margin-bottom: 1em;
+}
+
+.i, .ib {
+    font-style: italic;
+}
+
+.b, .ib {
+    font-weight: bold;
+}
+
+.center {
+    text-align: center;
+}
+
+.left {
+    text-align: left;
+}
+
+.right {
+    text-align: right;
+}
+
+.justify {
+    text-align: justify;
+}
+
+.small {
+    font-size: 0,8125em;
+}
+
+.smaller {
+    font-size: 0.75em;
+}
+
+.tiny {
+    font-size: 0.675em;
+}
+
+/* Table caption (must be the first element in <table>) */
+.caption-top {
+    caption-side: top;
+}
+
+.caption-bottom {
+    caption-side: bottom;
+}
+
+.separator {
+    display: block;
+    color: #666;
+    text-align: center;
+    margin: 1em 0;
 }
