@@ -26,21 +26,21 @@
         <dc:identifier>urn:lubimyczytac:49027</dc:identifier>
         <dc:contributor>Sebastian Pająk</dc:contributor>
         <!-- Read time tip: an adult reads about 250 words per minute on an average -->
-        <meta property="schema:wordCount">1636</meta>
+        <meta property="schema:wordCount">2123</meta>
         <meta property="schema:numberOfPages">10</meta>
     </metadata>
     <manifest>
         <item href="images/cover.jpg" id="cover" media-type="image/jpeg" properties="cover-image"/>
         <item href="images/EPUB_logo.svg" id="epub-logo" media-type="image/svg+xml"/>
-        <item href="images/ia.jpg" id="image-a-small" media-type="image/jpeg"/>
-        <item href="images/ib.jpg" id="image-b-small" media-type="image/jpeg"/>
-        <item href="images/ic.jpg" id="image-c-small" media-type="image/jpeg"/>
-        <item href="images/ia_small.jpg" id="image-a" media-type="image/jpeg"/>
-        <item href="images/ib_small.jpg" id="image-b" media-type="image/jpeg"/>
-        <item href="images/ic_small.jpg" id="image-c" media-type="image/jpeg"/>
         <item href="style.css" id="css" media-type="text/css"/>
-        <item href="frontmatter.xhtml" id="frontmatter" media-type="application/xhtml+xml"/>
+        <item href="images/ia.jpg" id="image-a" media-type="image/jpeg"/>
+        <item href="images/ib.jpg" id="image-b" media-type="image/jpeg"/>
+        <item href="images/ic.jpg" id="image-c" media-type="image/jpeg"/>
+        <item href="images/ia_small.jpg" id="image-a-small" media-type="image/jpeg"/>
+        <item href="images/ib_small.jpg" id="image-b-small" media-type="image/jpeg"/>
+        <item href="images/ic_small.jpg" id="image-c-small" media-type="image/jpeg"/>
         <item href="toc.xhtml" id="toc" media-type="application/xhtml+xml" properties="nav"/>
+        <item href="frontmatter.xhtml" id="frontmatter" media-type="application/xhtml+xml"/>
         <item href="ch01.xhtml" id="ch01" media-type="application/xhtml+xml"/>
         <item href="ch02.xhtml" id="ch02" media-type="application/xhtml+xml"/>
         <item href="ch03.xhtml" id="ch03" media-type="application/xhtml+xml"/>

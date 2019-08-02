@@ -1,120 +1,266 @@
-body {
-    font-size: 1em;
+@page {
+    margin: 30px 30px 20px 30px;
+    padding: 0;
 }
 
-section, .section {
+/* ------- Sections ------------------------------------------------------------
+    <body>, <article>, <section>, <nav>, <aside>, <h1> - <h6>, <header>, <footer>
+*/
+body {
+    font-size: 100%;
+    font-weight: normal;
+    text-align: justify;
+    margin: 0;
+    padding: 0;
+    widows: 2;
+    orphans: 2
+}
+
+article, section, nav {
     page-break-before: always;
     page-break-after: always;
 }
 
-p {
-    margin: 1em 0;
-    text-align: justify;
+body > :last-child,
+body > article > :last-child,
+body > section > :last-child,
+body > nav > :last-child {
+    margin-bottom: 0;
 }
 
-/* Micro guide for most common inline tags:
-    <em>       - stress emphasis
-    <i>        - technical terms, foreign language phrases, thoughts etc.
-    <q>        - quotation (adds quotes)
-    <cite>     - title of a cited work
-    <small>    - smaller text
-    <strong>   - strong importance, seriousness, or urgency
-    <sub>      - subscript
-    <sup>      - superscript
-*/
+body > :first-child,
+body > article > :first-child,
+body > section > :first-child,
+body > nav > :first-child {
+    margin-top: 0;
+}
 
-hr {
-    height: 1px;
-    border: 0 none;
-    padding: 0;
-    margin: 1em 0;
-    background-color: #666;
+h1, h2, h3, h4, h5, h6 {
+    text-align: left;
+    font-weight: bold;
+    margin: 1.125em 0 0.75em;
+    page-break-after: avoid;
+    page-break-inside: avoid;
+}
+
+h1 {
+    font-size: 1.875rem;
+}
+
+h2 {
+    font-size: 1.625rem;
+}
+
+h3 {
+    font-size: 1.375rem;
+}
+
+h4 {
+    font-size: 1.125rem;
+    margin: 1rem 0;
+}
+
+h5 {
+    font-size: 1.0625rem;
+    margin: 1rem 0;
+    font-style: italic;
+}
+
+h6 {
+    font-size: 1rem;
+    margin: 1rem 0;
+    font-style: italic;
+}
+
+/* ------- Content grouping ------------------------------------------------- */
+p {
+    margin: 1rem 0;
 }
 
 blockquote {
-    margin: 1em 0 1em 2%;
-    padding-left: 2%;
-    border-left: 2px solid #666;
-    text-align: justify;
-}
-
-ol, ul {
-    margin: 1em 0;
-}
-
-table {
-    border-collapse: collapse;
+    margin: 1rem 0;
+    padding-left: 2.5%;
     border: 0 none;
-    text-align: center;
-    width: 100%;
-    margin: 1em 0;
-    page-break-inside: avoid;
-    break-inside: avoid;
-}
-
-td, th {
-    padding: 1.25%;
-    border: 1px solid #666;
-    text-align: center;
-    vertical-align: middle;
-    page-break-inside: avoid;
-    break-inside: avoid;
-}
-
-caption {
-    text-align: justify;
+    border-left: 0.1875em solid #444;
 }
 
 figure {
-    margin: 1em 0;
-    page-break-inside: avoid;
-    break-inside: avoid;
+    margin: 1rem 0;
     text-align: center;
+    page-break-inside: auto;
 }
 
 figcaption {
+    font-size: 0.875rem;
+    text-align: center;
+}
+
+dl, ol, ul, pre {
+    margin: 1rem 0;
+}
+
+li > ol, li > ul {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+dt, pre {
     text-align: left;
 }
 
-/* https://friendsofepub.github.io/eBookTricks */
-sub {
+hr {
+    height: 0;
+    width: auto;
+    padding: 0;
+    border: 0 none;
+    border-top: 0.0625rem solid #444;
+    margin: 1.25rem auto;
+    text-align: center;
+    page-break-after: avoid;
+    page-break-inside: avoid;
+}
+
+[hidden] {
+    display: none;
+}
+
+/* ------- Text (inline) -------------------------------------------------------
+    <em>       - stress emphasis
+    <strong>   - strong importance, seriousness, or urgency
+    <small>    - side comments such as small print
+    <s>        - no longer accurate or no longer relevant
+    <cite>     - reference to a creative work
+    <q>        - quotation from another source (its address may be specified in cite attribute)
+    <dfn>      - term being defined
+    <abbr>     - abbreviation or acronym (optionally with its expansion in title attribute)
+    <code>     - fragment of computer code
+    <sub>      - subscript
+    <sup>      - superscript
+    <i>        - technical terms, foreign language phrases, thoughts etc.
+    <b>        - draw attention
+    <u>        - non-textual annotation
+    <mark>     - highlight for reference purposes
+*/
+
+small {
+    font-size: 0.875em;
+}
+
+sub, sup {
     font-size: 0.675em;
     line-height: 1.2;
+}
+
+sub {
     vertical-align: sub;
     vertical-align: -20%;
 }
 
 sup {
-    font-size: 0.675em;
-    line-height: 1.2;
     vertical-align: super;
     vertical-align: 35%;
 }
 
+/* ---------- Image (inline) ------------------------------------------------ */
+img {
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+    vertical-align: bottom;
+}
+
+/* ---------- Tables -------------------------------------------------------- */
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    border: 0 none;
+    padding: 0;
+    width: auto;
+    margin: 1rem auto;
+    page-break-inside: auto;
+    font-feature-settings: "tnum" 1;
+    font-variant-numeric: tabular-nums;
+}
+
+th {
+    padding: 0.5rem 1.75% 0.5rem 0;
+    border-bottom: 0.125rem solid #444;
+}
+
+td {
+    padding: 0.3125rem 1.75% 0.3125rem 0;
+    border-bottom: 0.0625rem solid #444;
+}
+
+td, th {
+    empty-cells: show;
+    text-align: left;
+    vertical-align: baseline;
+}
+
+caption {
+    font-size: 0.875rem;
+    text-align: center;
+    caption-side: bottom;
+}
+
 /* --------- Custom classes ------------------------------------------------- */
 
-ul li.no-bullet {
-    list-style-type: none;
+/* Grid table */
+table.grid {
+    border: 0.125rem solid #444;
+}
+
+table.grid th {
+    padding: 0.5rem 2%;
+    border: 0.125rem solid #444;
+}
+
+table.grid td {
+    padding: 0.3125rem 2%;
+    border: 0.0625rem solid #444;
+}
+
+/* Table caption position (<caption> must be the first element in <table>) */
+caption.top {
+    caption-side: top;
+}
+
+caption.bottom {
+    caption-side: bottom;
 }
 
 .brb {
     page-break-before: always;
 }
 
+.no-brb {
+    page-break-before: avoid;
+}
+
 .bra {
     page-break-after: always;
 }
 
-.m {
-    margin: 1em 0;
+.no-bra {
+    page-break-after: avoid;
 }
 
-.mt {
-    margin-top: 1em;
+.mt, .m {
+    margin-top: 1rem;
 }
 
-.mb {
-    margin-bottom: 1em;
+.mb, .m {
+    margin-bottom: 1rem;
+}
+
+.mt-0, .m-0 {
+    margin-top: 0;
+}
+
+.mb-0, .m-0 {
+    margin-bottom: 0;
 }
 
 .i, .ib {
@@ -129,31 +275,31 @@ ul li.no-bullet {
     text-decoration: underline;
 }
 
-.center {
+.center, .c {
     text-align: center;
 }
 
-.left {
+.left, .l {
     text-align: left;
 }
 
-.right {
+.right, .r {
     text-align: right;
 }
 
-.justify {
+.justify, .j {
     text-align: justify;
 }
 
-.small {
+.s-8750, .s-1, .small, .s {
     font-size: 0.875em;
 }
 
-.smaller {
+.s-8125, .s-2 {
     font-size: 0.8125em;
 }
 
-.tiny {
+.s-7500, .s-3 {
     font-size: 0.75em;
 }
 
@@ -165,18 +311,33 @@ ul li.no-bullet {
     text-transform: capitalize;
 }
 
-/* Table caption (must be the first element in <table>) */
-.caption-top {
-    caption-side: top;
+.w-100 { width: 100%; }
+.w-90  { width: 90%;  }
+.w-80  { width: 80%;  }
+.w-70  { width: 70%;  }
+.w-60  { width: 60%;  }
+.w-50  { width: 50%;  }
+.w-40  { width: 40%;  }
+.w-30  { width: 30%;  }
+.w-20  { width: 20%;  }
+
+.no-bullet {
+    list-style-type: none;
 }
 
-.caption-bottom {
-    caption-side: bottom;
+.box {
+    margin: 1rem auto;
+    padding: 0.375rem 2%;
+    border: 0.0625rem solid #444;
 }
 
-.separator {
+.asterism {
     display: block;
-    color: #666;
     text-align: center;
-    margin: 1em 0;
+    font-size: 1.125rem;
+    margin: 1.375rem auto;
+}
+
+.asterism:before {
+    content: '\2042';
 }
