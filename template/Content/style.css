@@ -178,6 +178,7 @@ table {
     border: 0 none;
     padding: 0;
     width: auto;
+    text-align: left;
     margin: 1rem auto;
     page-break-inside: auto;
     font-feature-settings: "tnum" 1;
@@ -196,7 +197,6 @@ td {
 
 td, th {
     empty-cells: show;
-    text-align: left;
     vertical-align: baseline;
 }
 
