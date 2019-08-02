@@ -88,7 +88,7 @@ blockquote {
 figure {
     margin: 1rem 0;
     text-align: center;
-    page-break-inside: auto;
+    page-break-inside: avoid;
 }
 
 figcaption {
@@ -178,20 +178,21 @@ table {
     border: 0 none;
     padding: 0;
     width: auto;
+    max-width: 100%;
     text-align: left;
     margin: 1rem auto;
-    page-break-inside: auto;
+    page-break-inside: avoid;
     font-feature-settings: "tnum" 1;
     font-variant-numeric: tabular-nums;
 }
 
 th {
-    padding: 0.5rem 1.75% 0.5rem 0;
+    padding: 0.5rem 10px 0.5rem 0;
     border-bottom: 0.125rem solid #444;
 }
 
 td {
-    padding: 0.3125rem 1.75% 0.3125rem 0;
+    padding: 0.3125rem 10px 0.3125rem 0;
     border-bottom: 0.0625rem solid #444;
 }
 
@@ -214,13 +215,17 @@ table.grid {
 }
 
 table.grid th {
-    padding: 0.5rem 2%;
+    padding: 0.5rem 8px;
     border: 0.125rem solid #444;
 }
 
 table.grid td {
-    padding: 0.3125rem 2%;
+    padding: 0.3125rem 8px;
     border: 0.0625rem solid #444;
+}
+
+table.fixed {
+    table-layout: fixed;
 }
 
 /* Table caption position (<caption> must be the first element in <table>) */
@@ -330,6 +335,7 @@ caption.bottom {
     margin: 1rem auto;
     padding: 0.375rem 2%;
     border: 0.0625rem solid #444;
+    page-break-inside: avoid;
 }
 
 .asterism {
