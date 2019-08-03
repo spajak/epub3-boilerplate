@@ -92,6 +92,8 @@ figure {
 }
 
 figcaption {
+    display: block;
+    margin: 0.125rem auto;
     font-size: 0.875rem;
     text-align: center;
 }
@@ -204,7 +206,6 @@ td, th {
 caption {
     font-size: 0.875rem;
     text-align: center;
-    caption-side: bottom;
 }
 
 /* --------- Custom classes ------------------------------------------------- */
@@ -228,7 +229,9 @@ table.fixed {
     table-layout: fixed;
 }
 
-/* Table caption position (<caption> must be the first element in <table>) */
+/* Table caption position (<caption> must be the first element in <table>)
+   Kindle: Setting caption-side breaks "Enhanced Typesetting"!
+*/
 caption.top {
     caption-side: top;
 }
@@ -333,7 +336,7 @@ caption.bottom {
 
 .box {
     margin: 1rem auto;
-    padding: 0.375rem 2%;
+    padding: 0.3125rem 2%;
     border: 0.0625rem solid #444;
     page-break-inside: avoid;
 }

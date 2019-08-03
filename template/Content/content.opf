@@ -7,14 +7,14 @@
         <dc:source>https://www.example.com/original-article.html</dc:source>
         <dc:language>en</dc:language>
         <dc:title id="title">The Book's Title</dc:title>
-        <meta refines="#title" property="title-type">main</meta>
-        <meta refines="#title" property="file-as">Book's Title, The</meta>
-        <meta refines="#title" property="alternate-script" xml:lang="pl">Tytuł książki w innym języku</meta>
+            <meta refines="#title" property="title-type">main</meta>
+            <meta refines="#title" property="file-as">Book's Title, The</meta>
+            <meta refines="#title" property="alternate-script" xml:lang="pl">Tytuł książki w innym języku</meta>
         <dc:title id="subtitle">Secondary Title</dc:title>
-        <meta refines="#subtitle" property="title-type">subtitle</meta>
+            <meta refines="#subtitle" property="title-type">subtitle</meta>
         <dc:creator id="creator">The Book's Author</dc:creator>
-        <meta refines="#creator" property="file-as">Author, The Book's</meta>
-        <meta refines="#creator" property="role" scheme="marc:relators">aut</meta>
+            <meta refines="#creator" property="file-as">Author, The Book's</meta>
+            <meta refines="#creator" property="role" scheme="marc:relators">aut</meta>
         <dc:description xml:lang="en">Very good book about everything what is in The Universe</dc:description>
         <dc:description xml:lang="pl">Świetna książka o wszystkich rzeczach we Wszechświecie</dc:description>
         <dc:date>2017-03-01</dc:date>
@@ -22,7 +22,7 @@
         <dc:subject>Dark Ages</dc:subject>
         <dc:subject>The Holy Grail</dc:subject>
         <meta id="series" property="belongs-to-collection">My Books Collection</meta>
-        <meta refines="#series" property="collection-type">series</meta>
+            <meta refines="#series" property="collection-type">series</meta>
         <dc:identifier>urn:isbn:9781566199094</dc:identifier>
         <dc:identifier>urn:goodreads:46170</dc:identifier>
         <dc:identifier>urn:lubimyczytac:49027</dc:identifier>
