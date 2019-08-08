@@ -13,12 +13,13 @@
         <dc:title id="subtitle">Secondary Title</dc:title>
             <meta refines="#subtitle" property="title-type">subtitle</meta>
         <dc:creator id="creator">The Book's Author</dc:creator>
-            <meta refines="#creator" property="file-as">Author, The Book's</meta>
             <meta refines="#creator" property="role" scheme="marc:relators">aut</meta>
+            <meta refines="#creator" property="file-as">Author, The Book's</meta>
         <dc:description xml:lang="en">Very good book about everything what is in The Universe</dc:description>
         <dc:description xml:lang="pl">Świetna książka o wszystkich rzeczach we Wszechświecie</dc:description>
         <dc:date>2017-03-01</dc:date>
         <dc:publisher>Home Publisher</dc:publisher>
+        <dc:type>Novel</dc:type>
         <dc:subject>Dark Ages</dc:subject>
         <dc:subject>The Holy Grail</dc:subject>
         <meta id="series" property="belongs-to-collection">My Books Collection</meta>

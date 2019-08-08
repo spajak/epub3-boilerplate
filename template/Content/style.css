@@ -39,7 +39,7 @@ body > nav > :first-child {
 h1, h2, h3, h4, h5, h6 {
     text-align: left;
     font-weight: bold;
-    margin: 1.125em 0 0.75em;
+    margin: 1.25em 0 0.875em;
     page-break-after: avoid;
     page-break-inside: avoid;
 }
@@ -285,6 +285,10 @@ caption.bottom {
 }
 
 .center, .c {
+    text-align: center;
+}
+
+.cc > *, .c.c > * {
     text-align: center;
 }
 
