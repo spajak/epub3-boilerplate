@@ -4,6 +4,7 @@
     <metadata xmlns:dc="http://purl.org/dc/elements/1.1/">
         <dc:identifier id="pub-id">urn:uuid:ff375c52-1160-4dc2-9d41-324277b8c78f</dc:identifier>
         <meta property="dcterms:modified">2019-07-25T18:00:00Z</meta>
+        <dc:identifier>https://example.com/foo</dc:identifier>
         <dc:source>https://www.example.com/original-article.html</dc:source>
         <dc:language>en</dc:language>
         <dc:title id="title">The Book's Title</dc:title>
@@ -43,15 +44,17 @@
         <item href="images/ib_small.jpg" id="image-b-small" media-type="image/jpeg"/>
         <item href="images/ic_small.jpg" id="image-c-small" media-type="image/jpeg"/>
         <item href="toc.xhtml" id="toc" media-type="application/xhtml+xml" properties="nav"/>
-        <item href="frontmatter.xhtml" id="frontmatter" media-type="application/xhtml+xml"/>
+        <item href="titlepage.xhtml" id="titlepage" media-type="application/xhtml+xml"/>
+        <item href="epigraph.xhtml" id="epigraph" media-type="application/xhtml+xml"/>
         <item href="ch01.xhtml" id="ch01" media-type="application/xhtml+xml"/>
         <item href="ch02.xhtml" id="ch02" media-type="application/xhtml+xml"/>
         <item href="ch03.xhtml" id="ch03" media-type="application/xhtml+xml"/>
         <item href="backmatter.xhtml" id="backmatter" media-type="application/xhtml+xml"/>
     </manifest>
     <spine>
-        <itemref idref="frontmatter"/>
+        <itemref idref="titlepage"/>
         <itemref idref="toc"/>
+        <itemref idref="epigraph"/>
         <itemref idref="ch01"/>
         <itemref idref="ch02"/>
         <itemref idref="ch03"/>

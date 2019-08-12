@@ -5,7 +5,7 @@
 }
 
 /* ------- Sections ------------------------------------------------------------
-    <body>, <article>, <section>, <nav>, <aside>, <h1> - <h6>, <header>, <footer>
+    <body>, <section>, <nav>, <h1> - <h6> // <article>, <aside>, <header>, <footer>
 */
 body {
     font-size: 100%;
@@ -17,29 +17,17 @@ body {
     orphans: 2
 }
 
-article, section, nav {
+section, nav {
     page-break-before: always;
     page-break-after: always;
-}
-
-body > :last-child,
-body > article > :last-child,
-body > section > :last-child,
-body > nav > :last-child {
-    margin-bottom: 0;
-}
-
-body > :first-child,
-body > article > :first-child,
-body > section > :first-child,
-body > nav > :first-child {
-    margin-top: 0;
 }
 
 h1, h2, h3, h4, h5, h6 {
     text-align: left;
     font-weight: bold;
     margin: 1.25em 0 0.875em;
+    -epub-hyphens: none;
+    hyphens: none;
     page-break-after: avoid;
     page-break-inside: avoid;
 }
@@ -58,7 +46,7 @@ h3 {
 
 h4 {
     font-size: 1.125rem;
-    margin: 1rem 0;
+    margin: 1.125rem 0 1rem;
 }
 
 h5 {
@@ -73,16 +61,26 @@ h6 {
     font-style: italic;
 }
 
+h1.chapter, h2.chapter, h3.chapter {
+    text-align: center;
+    margin: 4.5rem 0;
+}
+
 /* ------- Content grouping ------------------------------------------------- */
 p {
     margin: 1rem 0;
+}
+
+p.classic {
+    margin: 0.0625rem 0;
+    text-indent: 1rem;
 }
 
 blockquote {
     margin: 1rem 0;
     padding-left: 2.5%;
     border: 0 none;
-    border-left: 0.1875em solid #444;
+    border-left: 0.1875rem solid currentColor;
 }
 
 figure {
@@ -93,7 +91,7 @@ figure {
 
 figcaption {
     display: block;
-    margin: 0.125rem auto;
+    margin: 0.25rem auto;
     font-size: 0.875rem;
     text-align: center;
 }
@@ -102,9 +100,33 @@ dl, ol, ul, pre {
     margin: 1rem 0;
 }
 
+pre {
+    tab-size: 2;
+}
+
 li > ol, li > ul {
     margin-top: 0;
     margin-bottom: 0;
+}
+
+ol.off, ul.off, li.off, ol.p, ul.p {
+    list-style-type: none;
+}
+
+ol.off, ul.off, ol.p, ul.p {
+    padding: 0;
+}
+
+ol.p > li, ul.p > li {
+    margin: 0.75rem 0;
+}
+
+dt {
+    font-weight: bold;
+}
+
+dt:after {
+    content: ": ";
 }
 
 dt, pre {
@@ -116,11 +138,10 @@ hr {
     width: auto;
     padding: 0;
     border: 0 none;
-    border-top: 0.0625rem solid #444;
-    margin: 1.25rem auto;
+    border-top: 0.125rem solid currentColor;
+    margin: 1.5rem auto;
     text-align: center;
     page-break-after: avoid;
-    page-break-inside: avoid;
 }
 
 [hidden] {
@@ -144,6 +165,14 @@ hr {
     <u>        - non-textual annotation
     <mark>     - highlight for reference purposes
 */
+
+em, cite, q, i {
+    font-style: italic;
+}
+
+strong, b {
+    font-weight: bold;
+}
 
 small {
     font-size: 0.875em;
@@ -188,14 +217,22 @@ table {
     font-variant-numeric: tabular-nums;
 }
 
-th {
-    padding: 0.5rem 10px 0.5rem 0;
-    border-bottom: 0.125rem solid #444;
+table.fixed {
+    table-layout: fixed;
 }
 
-td {
+th {
+    padding: 0.3125rem 10px 0.5rem 0;
+    border-bottom: 0.125rem solid currentColor;
+}
+
+th.v {
+    border-right: 0.125rem solid currentColor;
+}
+
+td, th.v {
     padding: 0.3125rem 10px 0.3125rem 0;
-    border-bottom: 0.0625rem solid #444;
+    border-bottom: 0.0625rem solid currentColor;
 }
 
 td, th {
@@ -205,33 +242,12 @@ td, th {
 
 caption {
     font-size: 0.875rem;
+    margin: 0.25rem auto;
     text-align: center;
 }
 
-/* --------- Custom classes ------------------------------------------------- */
-
-/* Grid table */
-table.grid {
-    border: 0.125rem solid #444;
-}
-
-table.grid th {
-    padding: 0.5rem 8px;
-    border: 0.125rem solid #444;
-}
-
-table.grid td {
-    padding: 0.3125rem 8px;
-    border: 0.0625rem solid #444;
-}
-
-table.fixed {
-    table-layout: fixed;
-}
-
 /* Table caption position (<caption> must be the first element in <table>)
-   Kindle: Setting caption-side breaks "Enhanced Typesetting"!
-*/
+   Kindle: Setting caption-side breaks "Enhanced Typesetting"! */
 caption.top {
     caption-side: top;
 }
@@ -240,6 +256,54 @@ caption.bottom {
     caption-side: bottom;
 }
 
+/* --------- Grid table classes --------------------------------------------- */
+table.grid {
+    border: 0.125rem solid currentColor;
+}
+
+table.grid th {
+    padding: 0.5rem 8px;
+    border: 0.125rem solid currentColor;
+}
+
+table.grid td {
+    padding: 0.3125rem 8px;
+    border: 0.0625rem solid currentColor;
+}
+
+/* --------- Asterism classes ----------------------------------------------- */
+.asterism,
+.asterism-1,
+.asterism-3,
+.asterism-6 {
+    display: block;
+    text-align: center;
+    font-size: 1rem;
+    margin: 1.375rem auto;
+    page-break-after: avoid;
+}
+
+.asterism:before, .asterism-1:before {
+    content: '⁂'; /* U+2042 */
+}
+
+.asterism-3:before {
+    content: '✻ ✻ ✻'; /* U+273B */
+}
+
+.asterism-6:before {
+    content: '―― // ――'; /* U+2015 */
+}
+
+/* --------- Box classes ---------------------------------------------------- */
+.box {
+    margin: 1rem auto;
+    padding: 0.3125rem 2%;
+    border: 0.125rem solid currentColor;
+    page-break-inside: avoid;
+}
+
+/* --------- Utility classes ------------------------------------------------ */
 .brb {
     page-break-before: always;
 }
@@ -256,14 +320,6 @@ caption.bottom {
     page-break-after: avoid;
 }
 
-.mt, .m {
-    margin-top: 1rem;
-}
-
-.mb, .m {
-    margin-bottom: 1rem;
-}
-
 .mt-0, .m-0 {
     margin-top: 0;
 }
@@ -272,23 +328,48 @@ caption.bottom {
     margin-bottom: 0;
 }
 
-.i, .ib {
+.mt-1, .mt, .m-1, .m {
+    margin-top: 1rem;
+}
+
+.mb-1, .mb, .m-1, .m {
+    margin-bottom: 1rem;
+}
+
+.mt-2, .m-2 {
+    margin-top: 2.5rem;
+}
+
+.m-2 {
+    margin-bottom: 2.5rem;
+}
+
+.m-3 {
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+}
+
+.pt-1, .pt {
+    padding-top: 1rem;
+}
+
+.pt-2 {
+    padding-top: 2.5rem;
+}
+
+.i {
     font-style: italic;
 }
 
-.b, .ib {
+.b {
     font-weight: bold;
 }
 
-.u {
-    text-decoration: underline;
-}
-
-.center, .c {
+.center, .c, .c-c {
     text-align: center;
 }
 
-.cc > *, .c.c > * {
+.c-c > * {
     text-align: center;
 }
 
@@ -316,7 +397,7 @@ caption.bottom {
     font-size: 0.75em;
 }
 
-.upper {
+.upper, .u {
     text-transform: uppercase;
 }
 
@@ -333,25 +414,3 @@ caption.bottom {
 .w-40  { width: 40%;  }
 .w-30  { width: 30%;  }
 .w-20  { width: 20%;  }
-
-.no-bullet {
-    list-style-type: none;
-}
-
-.box {
-    margin: 1rem auto;
-    padding: 0.3125rem 2%;
-    border: 0.0625rem solid #444;
-    page-break-inside: avoid;
-}
-
-.asterism {
-    display: block;
-    text-align: center;
-    font-size: 1.125rem;
-    margin: 1.375rem auto;
-}
-
-.asterism:before {
-    content: '\2042';
-}
