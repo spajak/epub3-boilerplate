@@ -4,6 +4,18 @@
     padding: 0;
 }
 
+article,
+aside,
+figure,
+figcaption,
+footer,
+header,
+main,
+nav,
+section {
+    display: block;
+}
+
 /* ------- Sections ------------------------------------------------------------
     <body>, <section>, <nav>, <h1> - <h6> // <article>, <aside>, <header>, <footer>
 */
@@ -71,9 +83,13 @@ p {
     margin: 1rem 0;
 }
 
-p.classic {
-    margin: 0.0625rem 0;
-    text-indent: 1rem;
+p.classic, .classic p {
+    margin-bottom: 0;
+}
+
+p.classic, .classic p + p {
+    margin-top: 0;
+    text-indent: 1.25rem;
 }
 
 blockquote {
@@ -86,7 +102,6 @@ blockquote {
 figure {
     margin: 1rem 0;
     text-align: center;
-    page-break-inside: avoid;
 }
 
 figcaption {
@@ -279,20 +294,22 @@ table.grid td {
     display: block;
     text-align: center;
     font-size: 1rem;
-    margin: 1.375rem auto;
+    line-height: 1.2;
+    margin: 1.5rem auto;
     page-break-after: avoid;
 }
 
 .asterism:before, .asterism-1:before {
-    content: '⁂'; /* U+2042 */
+    font-size: 1.25em;
+    content: '\2042'; /* ⁂ (U+2042) */
 }
 
 .asterism-3:before {
-    content: '✻ ✻ ✻'; /* U+273B */
+    content: '\273B\2002\273B\2002\273B'; /* ✻ ✻ ✻ (U+273B) */
 }
 
 .asterism-6:before {
-    content: '―― // ――'; /* U+2015 */
+    content: '\2015\2015\2002//\2002\2015\2015'; /* ―― // ―― (U+2015) */
 }
 
 /* --------- Box classes ---------------------------------------------------- */
@@ -357,6 +374,10 @@ table.grid td {
     padding-top: 2.5rem;
 }
 
+.bt {
+    border-top: 1rem solid transparent;
+}
+
 .i {
     font-style: italic;
 }
@@ -403,6 +424,10 @@ table.grid td {
 
 .caps {
     text-transform: capitalize;
+}
+
+.small-caps {
+    font-variant: small-caps;
 }
 
 .w-100 { width: 100%; }
