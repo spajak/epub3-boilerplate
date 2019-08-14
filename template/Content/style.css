@@ -1,6 +1,6 @@
 @charset "UTF-8";
 @page {
-    margin: 30px 30px 20px 30px;
+    margin: 5mm 5mm 3mm 5mm;
     padding: 0;
 }
 
@@ -75,12 +75,13 @@ h6 {
 
 h1.chapter, h2.chapter, h3.chapter {
     text-align: center;
-    margin: 4.5rem 0;
+    margin: 4rem 0;
 }
 
 /* ------- Content grouping ------------------------------------------------- */
 p {
     margin: 1rem 0;
+    text-indent: 0;
 }
 
 p.classic, .classic p {
@@ -93,6 +94,7 @@ p.classic, .classic p + p {
 }
 
 blockquote {
+    display: block;
     margin: 1rem 0;
     padding-left: 2.5%;
     border: 0 none;
@@ -237,7 +239,7 @@ table.fixed {
 }
 
 th {
-    padding: 0.3125rem 10px 0.5rem 0;
+    padding: 0.3125rem 6pt 0.5rem 0;
     border-bottom: 0.125rem solid currentColor;
 }
 
@@ -246,7 +248,7 @@ th.v {
 }
 
 td, th.v {
-    padding: 0.3125rem 10px 0.3125rem 0;
+    padding: 0.3125rem 6pt 0.3125rem 0;
     border-bottom: 0.0625rem solid currentColor;
 }
 
@@ -277,12 +279,12 @@ table.grid {
 }
 
 table.grid th {
-    padding: 0.5rem 8px;
+    padding: 0.5rem 5pt;
     border: 0.125rem solid currentColor;
 }
 
 table.grid td {
-    padding: 0.3125rem 8px;
+    padding: 0.3125rem 5pt;
     border: 0.0625rem solid currentColor;
 }
 
@@ -292,7 +294,7 @@ table.grid td {
 .asterism-3,
 .asterism-6 {
     display: block;
-    text-align: center;
+    text-align: center !important;
     font-size: 1rem;
     line-height: 1.2;
     margin: 1.5rem auto;
@@ -300,7 +302,7 @@ table.grid td {
 }
 
 .asterism:before, .asterism-1:before {
-    font-size: 1.25em;
+    font-size: 1.125em;
     content: '\2042'; /* ⁂ (U+2042) */
 }
 
@@ -317,7 +319,6 @@ table.grid td {
     margin: 1rem auto;
     padding: 0.3125rem 2%;
     border: 0.125rem solid currentColor;
-    page-break-inside: avoid;
 }
 
 /* --------- Utility classes ------------------------------------------------ */
