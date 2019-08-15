@@ -25,8 +25,10 @@ body {
     text-align: justify;
     margin: 0;
     padding: 0;
+    -webkit-hyphens: auto;
+    hyphens: auto;
     widows: 2;
-    orphans: 2
+    orphans: 2;
 }
 
 section, nav {
@@ -99,6 +101,12 @@ blockquote {
     padding-left: 2.5%;
     border: 0 none;
     border-left: 0.1875rem solid currentColor;
+}
+
+blockquote.fancy {
+    padding-right: 4%;
+    padding-left: 4%;
+    border-left: 0.8125rem solid #9F9F9F;
 }
 
 figure {
@@ -210,6 +218,19 @@ sup {
     vertical-align: 35%;
 }
 
+code {
+    white-space: pre;
+    font-family: monospace;
+}
+
+code.block {
+    display: block;
+    white-space: pre-wrap;
+    font-size: 0.8125em;
+    line-height: 1.2;
+    margin: 1rem 0;
+}
+
 /* ---------- Image (inline) ------------------------------------------------ */
 img {
     width: auto;
@@ -239,7 +260,7 @@ table.fixed {
 }
 
 th {
-    padding: 0.3125rem 6pt 0.5rem 0;
+    padding: 0.3125rem 8pt 0.4375rem 0;
     border-bottom: 0.125rem solid currentColor;
 }
 
@@ -248,7 +269,7 @@ th.v {
 }
 
 td, th.v {
-    padding: 0.3125rem 6pt 0.3125rem 0;
+    padding: 0.25rem 8pt 0.25rem 0;
     border-bottom: 0.0625rem solid currentColor;
 }
 
@@ -279,12 +300,12 @@ table.grid {
 }
 
 table.grid th {
-    padding: 0.5rem 5pt;
+    padding: 0.4375rem 5pt;
     border: 0.125rem solid currentColor;
 }
 
 table.grid td {
-    padding: 0.3125rem 5pt;
+    padding: 0.25rem 5pt;
     border: 0.0625rem solid currentColor;
 }
 
@@ -319,6 +340,18 @@ table.grid td {
     margin: 1rem auto;
     padding: 0.3125rem 2%;
     border: 0.125rem solid currentColor;
+}
+
+/* --------- Drop cap classes ----------------------------------------------- */
+.drop-cap:first-letter {
+    float: left;
+    font-size: 3.5em;
+    font-weight: bold;
+    text-indent: 0;
+    line-height: 1.2;
+    margin-top: -0.1725em;
+    margin-bottom: -0.1875em;
+    margin-right: 0.1375em;
 }
 
 /* --------- Utility classes ------------------------------------------------ */
