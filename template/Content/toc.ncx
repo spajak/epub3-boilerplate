@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<ncx xmlns="http://www.daisy.org/z3986/2005/ncx/" version="2005-1">
+<head>
+    <meta content="urn:uuid:ff375c52-1160-4dc2-9d41-324277b8c78f" name="dtb:uid"/>
+    <meta content="1" name="dtb:depth"/>
+    <meta content="0" name="dtb:totalPageCount"/>
+    <meta content="0" name="dtb:maxPageNumber"/>
+</head>
+<docTitle><text>The Book's Title</text></docTitle>
+<navMap>
+    <navPoint id="nav-1">
+        <navLabel><text>Bring Out Your Dead</text></navLabel>
+        <content src="ch01.xhtml#ch01"/>
+    </navPoint>
+
+    <navPoint id="nav-2">
+        <navLabel><text>We've Got a Witch</text></navLabel>
+        <content src="ch02.xhtml#ch02"/>
+    </navPoint>
+
+    <navPoint id="nav-3">
+        <navLabel><text>Swamps Suck Castles</text></navLabel>
+        <content src="ch03.xhtml#ch03"/>
+    </navPoint>
+
+    <navPoint id="nav-4">
+        <navLabel><text>Afterword</text></navLabel>
+        <content src="backmatter.xhtml#afterword"/>
+    </navPoint>
+
+</navMap>
+</ncx>

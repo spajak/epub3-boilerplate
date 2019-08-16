@@ -44,6 +44,7 @@
         <item href="images/ib_small.jpg" id="image-b-small" media-type="image/jpeg"/>
         <item href="images/ic_small.jpg" id="image-c-small" media-type="image/jpeg"/>
         <item href="toc.xhtml" id="toc" media-type="application/xhtml+xml" properties="nav"/>
+        <item href="toc.ncx" id="ncx" media-type="application/x-dtbncx+xml"/>
         <item href="titlepage.xhtml" id="titlepage" media-type="application/xhtml+xml"/>
         <item href="epigraph.xhtml" id="epigraph" media-type="application/xhtml+xml"/>
         <item href="ch01.xhtml" id="ch01" media-type="application/xhtml+xml"/>
@@ -51,7 +52,7 @@
         <item href="ch03.xhtml" id="ch03" media-type="application/xhtml+xml"/>
         <item href="backmatter.xhtml" id="backmatter" media-type="application/xhtml+xml"/>
     </manifest>
-    <spine>
+    <spine toc="ncx">
         <itemref idref="titlepage"/>
         <itemref idref="toc"/>
         <itemref idref="epigraph"/>
