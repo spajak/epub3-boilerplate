@@ -39,7 +39,7 @@ section, nav {
 h1, h2, h3, h4, h5, h6 {
     text-align: left;
     font-weight: bold;
-    margin: 1.375em 0 0.875em;
+    margin: 1.5rem 0;
     -epub-hyphens: none;
     hyphens: none;
     page-break-after: avoid;
@@ -52,30 +52,29 @@ h1 {
 
 h2 {
     font-size: 1.625rem;
+    margin-top: 2.75rem;
 }
 
 h3 {
     font-size: 1.375rem;
+    margin: 2.25rem 0 1.25rem;
 }
 
 h4 {
     font-size: 1.125rem;
-    margin: 1.25rem 0 1rem;
+    margin-bottom: 1rem;
 }
 
-h5 {
-    font-size: 1.0625rem;
-    margin: 1.25rem 0 1rem;
-    font-style: italic;
+h5, h6 {
+    font-size: 1rem;
+    margin: 1rem 0 0.5rem;
 }
 
 h6 {
-    font-size: 1rem;
-    margin: 1rem 0;
     font-style: italic;
 }
 
-h1.chapter, h2.chapter, h3.chapter {
+h1.chapter, h2.chapter, h3.chapter, h4.chapter {
     text-align: center;
     margin: 4rem 0;
 }

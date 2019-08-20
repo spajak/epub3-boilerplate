@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://www.idpf.org/2007/opf" unique-identifier="pub-id" version="3.0">
     <!-- https://www.w3.org/publishing/epub32/epub-packages.html -->
+    <!-- https://github.com/spajak/epub3-boilerplate -->
     <metadata xmlns:dc="http://purl.org/dc/elements/1.1/">
         <dc:identifier id="pub-id">urn:uuid:ff375c52-1160-4dc2-9d41-324277b8c78f</dc:identifier>
         <meta property="dcterms:modified">2019-07-25T18:00:00Z</meta>
@@ -34,23 +35,25 @@
         <meta property="schema:numberOfPages">10</meta>
     </metadata>
     <manifest>
+        <item href="toc.xhtml" id="toc" media-type="application/xhtml+xml" properties="nav"/>
+        <item href="toc.ncx" id="ncx" media-type="application/x-dtbncx+xml"/>
         <item href="images/cover.jpg" id="cover" media-type="image/jpeg" properties="cover-image"/>
-        <item href="images/EPUB_logo.svg" id="epub-logo" media-type="image/svg+xml"/>
         <item href="style.css" id="css" media-type="text/css"/>
+        <item href="titlepage.xhtml" id="titlepage" media-type="application/xhtml+xml"/>
+        <item href="epigraph.xhtml" id="epigraph" media-type="application/xhtml+xml"/>
+        <item href="ch01.xhtml" id="ch01" media-type="application/xhtml+xml"/>
+        <item href="ch02.xhtml" id="ch02" media-type="application/xhtml+xml"/>
+        <item href="ch03.xhtml" id="ch03" media-type="application/xhtml+xml"/>
+        <item href="afterword.xhtml" id="afterword" media-type="application/xhtml+xml"/>
+
+        <item href="contributors.xhtml" id="contributors" media-type="application/xhtml+xml"/>
+        <item href="images/EPUB_logo.svg" id="epub-logo" media-type="image/svg+xml"/>
         <item href="images/ia.jpg" id="image-a" media-type="image/jpeg"/>
         <item href="images/ib.jpg" id="image-b" media-type="image/jpeg"/>
         <item href="images/ic.jpg" id="image-c" media-type="image/jpeg"/>
         <item href="images/ia_small.jpg" id="image-a-small" media-type="image/jpeg"/>
         <item href="images/ib_small.jpg" id="image-b-small" media-type="image/jpeg"/>
         <item href="images/ic_small.jpg" id="image-c-small" media-type="image/jpeg"/>
-        <item href="toc.xhtml" id="toc" media-type="application/xhtml+xml" properties="nav"/>
-        <item href="toc.ncx" id="ncx" media-type="application/x-dtbncx+xml"/>
-        <item href="titlepage.xhtml" id="titlepage" media-type="application/xhtml+xml"/>
-        <item href="epigraph.xhtml" id="epigraph" media-type="application/xhtml+xml"/>
-        <item href="ch01.xhtml" id="ch01" media-type="application/xhtml+xml"/>
-        <item href="ch02.xhtml" id="ch02" media-type="application/xhtml+xml"/>
-        <item href="ch03.xhtml" id="ch03" media-type="application/xhtml+xml"/>
-        <item href="backmatter.xhtml" id="backmatter" media-type="application/xhtml+xml"/>
     </manifest>
     <spine toc="ncx">
         <itemref idref="titlepage"/>
@@ -59,6 +62,7 @@
         <itemref idref="ch01"/>
         <itemref idref="ch02"/>
         <itemref idref="ch03"/>
-        <itemref idref="backmatter"/>
+        <itemref idref="afterword"/>
+        <itemref idref="contributors"/>
     </spine>
 </package>

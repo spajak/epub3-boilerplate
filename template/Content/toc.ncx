@@ -25,7 +25,7 @@
 
     <navPoint id="nav-4">
         <navLabel><text>Afterword</text></navLabel>
-        <content src="backmatter.xhtml#afterword"/>
+        <content src="afterword.xhtml"/>
     </navPoint>
 
 </navMap>

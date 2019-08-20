@@ -21,4 +21,4 @@ foreach (array_slice($argv, 1) as $file) {
 }
 
 echo "Native PHP: ".$count." words\n";
-echo "Custom regex: ".$regexCount." words";
+echo "Custom regex: ".$regexCount." words (better for Unicode)";
