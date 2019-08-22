@@ -76,7 +76,7 @@ h6 {
 
 h1.chapter, h2.chapter, h3.chapter, h4.chapter {
     text-align: center;
-    margin: 4rem 0;
+    margin: 2.5em 0;
 }
 
 aside {
@@ -102,7 +102,7 @@ p.classic, .classic p + p {
 blockquote {
     display: block;
     margin: 1rem 0;
-    padding-left: 8pt;
+    padding-left: 6pt;
     border: 0 none;
     border-left: 0.1875rem solid currentColor;
 }
@@ -110,7 +110,7 @@ blockquote {
 /* Kindle specific */
 @media only amzn-kf8, amzn-mobi {
     blockquote {
-        padding-left: 12pt;
+        padding-left: 10pt;
     }
 }
 
@@ -162,7 +162,7 @@ dd {
     margin-left: 24pt;
 }
 
-@media only amzn-kf8 {
+@media only amzn-kf8, amzn-mobi {
     ul, ol {
         padding-left: 32pt;
     }
@@ -309,6 +309,7 @@ th {
 
 th.v {
     border-right: 0.125rem solid currentColor;
+    text-align: left;
 }
 
 td, th.v {
@@ -337,6 +338,12 @@ caption.bottom {
     caption-side: bottom;
 }
 
+@media only amzn-kf8, amzn-mobi {
+    th, td {
+        padding-right: 10pt;
+    }
+}
+
 /* --------- Grid table classes --------------------------------------------- */
 table.grid {
     border: 0.125rem solid currentColor;
@@ -350,6 +357,13 @@ table.grid th {
 table.grid td {
     padding: 0.25rem 4pt;
     border: 0.0625rem solid currentColor;
+}
+
+@media only amzn-kf8, amzn-mobi {
+    table.grid th, table.grid td {
+        padding-left: 6pt;
+        padding-right: 6pt;
+    }
 }
 
 /* --------- Asterism classes ----------------------------------------------- */
@@ -383,6 +397,13 @@ table.grid td {
     margin: 1rem auto;
     padding: 0.3125rem 6pt;
     border: 0.125rem solid currentColor;
+}
+
+@media only amzn-kf8 {
+    .box {
+        padding-left: 8pt;
+        padding-right: 8pt;
+    }
 }
 
 /* --------- Drop cap classes ----------------------------------------------- */
@@ -531,10 +552,3 @@ table.grid td {
 .w-40  { width: 40%;  }
 .w-30  { width: 30%;  }
 .w-20  { width: 20%;  }
-
-@media only amzn-kf8 {
-    .box {
-        padding-left: 8pt;
-        padding-right: 8pt;
-    }
-}
