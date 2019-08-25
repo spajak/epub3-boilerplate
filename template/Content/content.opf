@@ -20,7 +20,7 @@
         <dc:description xml:lang="en">Very good book about everything what is in The Universe</dc:description>
         <dc:description xml:lang="pl">Świetna książka o wszystkich rzeczach we Wszechświecie</dc:description>
         <dc:date>2017-03-01</dc:date>
-        <dc:publisher>Home Publisher</dc:publisher>
+        <dc:publisher>Home Publishing</dc:publisher>
         <dc:type>Novel</dc:type>
         <dc:subject>Dark Ages</dc:subject>
         <dc:subject>The Holy Grail</dc:subject>
@@ -45,7 +45,6 @@
         <item href="ch02.xhtml" id="ch02" media-type="application/xhtml+xml"/>
         <item href="ch03.xhtml" id="ch03" media-type="application/xhtml+xml"/>
         <item href="afterword.xhtml" id="afterword" media-type="application/xhtml+xml"/>
-
         <item href="contributors.xhtml" id="contributors" media-type="application/xhtml+xml"/>
         <item href="images/EPUB_logo.svg" id="epub-logo" media-type="image/svg+xml"/>
         <item href="images/ia.jpg" id="image-a" media-type="image/jpeg"/>

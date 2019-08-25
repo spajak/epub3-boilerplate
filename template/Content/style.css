@@ -134,6 +134,7 @@ figcaption {
 
 dl, ol, ul, pre {
     margin: 1rem 0;
+    text-align: left;
 }
 
 pre {
@@ -195,10 +196,6 @@ dt {
 
 dt:after {
     content: ": ";
-}
-
-dt, pre {
-    text-align: left;
 }
 
 hr {
