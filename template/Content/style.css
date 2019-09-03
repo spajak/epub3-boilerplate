@@ -235,6 +235,15 @@ em, cite, q, i {
     font-style: italic;
 }
 
+q {
+    quotes: none;
+}
+
+dfn {
+    font-style: normal;
+    font-weight: bold;
+}
+
 strong, b {
     font-weight: bold;
 }
@@ -256,6 +265,11 @@ sub {
 sup {
     vertical-align: super;
     vertical-align: 35%;
+}
+
+a.noteref {
+    font-size: 0.75em;
+    vertical-align: 25%;
 }
 
 code {

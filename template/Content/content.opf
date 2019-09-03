@@ -21,7 +21,7 @@
         <dc:description xml:lang="pl">Świetna książka o wszystkich rzeczach we Wszechświecie</dc:description>
         <dc:date>2017-03-01</dc:date>
         <dc:publisher>Home Publishing</dc:publisher>
-        <dc:type>Novel</dc:type>
+        <dc:type>Text</dc:type>
         <dc:subject>Dark Ages</dc:subject>
         <dc:subject>The Holy Grail</dc:subject>
         <meta id="series" property="belongs-to-collection">My Books Collection</meta>
@@ -35,18 +35,21 @@
         <meta property="schema:numberOfPages">10</meta>
     </metadata>
     <manifest>
-        <item href="toc.xhtml" id="toc" media-type="application/xhtml+xml" properties="nav"/>
-        <item href="toc.ncx" id="ncx" media-type="application/x-dtbncx+xml"/>
-        <item href="images/cover.jpg" id="cover" media-type="image/jpeg" properties="cover-image"/>
+        <item href="cover.jpg" id="cover" media-type="image/jpeg" properties="cover-image"/>
         <item href="style.css" id="css" media-type="text/css"/>
-        <item href="titlepage.xhtml" id="titlepage" media-type="application/xhtml+xml"/>
-        <item href="epigraph.xhtml" id="epigraph" media-type="application/xhtml+xml"/>
-        <item href="ch01.xhtml" id="ch01" media-type="application/xhtml+xml"/>
-        <item href="ch02.xhtml" id="ch02" media-type="application/xhtml+xml"/>
-        <item href="ch03.xhtml" id="ch03" media-type="application/xhtml+xml"/>
-        <item href="afterword.xhtml" id="afterword" media-type="application/xhtml+xml"/>
+        <item href="toc.ncx" id="ncx" media-type="application/x-dtbncx+xml"/>
         <item href="contributors.xhtml" id="contributors" media-type="application/xhtml+xml"/>
-        <item href="images/EPUB_logo.svg" id="epub-logo" media-type="image/svg+xml"/>
+        <item href="EPUB_logo.svg" id="epub-logo" media-type="image/svg+xml"/>
+
+        <item href="text/afterword.xhtml" id="afterword" media-type="application/xhtml+xml"/>
+        <item href="text/ch01.xhtml" id="ch01" media-type="application/xhtml+xml"/>
+        <item href="text/ch02.xhtml" id="ch02" media-type="application/xhtml+xml"/>
+        <item href="text/ch03.xhtml" id="ch03" media-type="application/xhtml+xml"/>
+        <item href="text/endnotes.xhtml" id="endnotes" media-type="application/xhtml+xml"/>
+        <item href="text/epigraph.xhtml" id="epigraph" media-type="application/xhtml+xml"/>
+        <item href="text/titlepage.xhtml" id="titlepage" media-type="application/xhtml+xml"/>
+        <item href="text/toc.xhtml" id="toc" media-type="application/xhtml+xml" properties="nav"/>
+
         <item href="images/ia.jpg" id="image-a" media-type="image/jpeg"/>
         <item href="images/ib.jpg" id="image-b" media-type="image/jpeg"/>
         <item href="images/ic.jpg" id="image-c" media-type="image/jpeg"/>
@@ -62,6 +65,7 @@
         <itemref idref="ch02"/>
         <itemref idref="ch03"/>
         <itemref idref="afterword"/>
+        <itemref idref="endnotes"/>
         <itemref idref="contributors"/>
     </spine>
 </package>

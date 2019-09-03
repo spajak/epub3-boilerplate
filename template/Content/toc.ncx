@@ -10,22 +10,27 @@
 <navMap>
     <navPoint id="nav-1">
         <navLabel><text>Bring Out Your Dead</text></navLabel>
-        <content src="ch01.xhtml#ch01"/>
+        <content src="text/ch01.xhtml#ch01"/>
     </navPoint>
 
     <navPoint id="nav-2">
         <navLabel><text>We've Got a Witch</text></navLabel>
-        <content src="ch02.xhtml#ch02"/>
+        <content src="text/ch02.xhtml#ch02"/>
     </navPoint>
 
     <navPoint id="nav-3">
         <navLabel><text>Swamps Suck Castles</text></navLabel>
-        <content src="ch03.xhtml#ch03"/>
+        <content src="text/ch03.xhtml#ch03"/>
     </navPoint>
 
     <navPoint id="nav-4">
         <navLabel><text>Afterword</text></navLabel>
-        <content src="afterword.xhtml"/>
+        <content src="text/afterword.xhtml"/>
+    </navPoint>
+
+    <navPoint id="nav-5">
+        <navLabel><text>Notes</text></navLabel>
+        <content src="text/endnotes.xhtml"/>
     </navPoint>
 
 </navMap>
