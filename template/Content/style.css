@@ -23,6 +23,7 @@ body {
     font-size: 100%;
     font-weight: normal;
     text-align: justify;
+    line-height: 1.35;
     margin: 0;
     padding: 0;
     -webkit-hyphens: auto;
@@ -38,6 +39,7 @@ section, nav {
 
 h1, h2, h3, h4, h5, h6 {
     text-align: left;
+    line-height: 1.25;
     font-weight: bold;
     margin: 1.5rem 0;
     -epub-hyphens: none;
@@ -122,6 +124,7 @@ blockquote.fancy {
 
 figure {
     margin: 1rem 0;
+    padding: 0;
     text-align: center;
 }
 
@@ -160,6 +163,7 @@ ul ul {
 
 dd {
     padding: 0;
+    margin: 0;
     margin-left: 24pt;
 }
 
@@ -184,6 +188,7 @@ ol.off, ul.off, li.off, ol.p, ul.p {
 
 ol.off, ul.off, ol.p, ul.p {
     padding: 0;
+    margin-left: 0;
 }
 
 ol.p > li, ul.p > li {
@@ -237,6 +242,7 @@ em, cite, q, i {
 
 q {
     quotes: none;
+    font-style: italic !important;
 }
 
 dfn {
@@ -269,6 +275,8 @@ sup {
 
 a.noteref {
     font-size: 0.75em;
+    line-height: 1.2;
+    vertical-align: super;
     vertical-align: 25%;
 }
 
@@ -406,14 +414,14 @@ table.grid td {
 /* --------- Box classes ---------------------------------------------------- */
 .box {
     margin: 1rem auto;
-    padding: 0.3125rem 6pt;
+    padding: 0.3125rem 8pt;
     border: 0.125rem solid currentColor;
 }
 
 @media only amzn-kf8 {
     .box {
-        padding-left: 8pt;
-        padding-right: 8pt;
+        padding-left: 10pt;
+        padding-right: 10pt;
     }
 }
 
@@ -540,6 +548,11 @@ table.grid td {
 
 .s-7500, .s-3 {
     font-size: 0.75em;
+}
+
+.reset {
+    font-style: normal;
+    font-weight: normal;
 }
 
 .upper, .u {

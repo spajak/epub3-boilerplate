@@ -35,7 +35,7 @@
         <meta property="schema:numberOfPages">10</meta>
     </metadata>
     <manifest>
-        <item href="cover.jpg" id="cover" media-type="image/jpeg" properties="cover-image"/>
+        <item href="cover.jpg" id="cover-img" media-type="image/jpeg" properties="cover-image"/>
         <item href="style.css" id="css" media-type="text/css"/>
         <item href="toc.ncx" id="ncx" media-type="application/x-dtbncx+xml"/>
         <item href="contributors.xhtml" id="contributors" media-type="application/xhtml+xml"/>
@@ -45,6 +45,7 @@
         <item href="text/ch01.xhtml" id="ch01" media-type="application/xhtml+xml"/>
         <item href="text/ch02.xhtml" id="ch02" media-type="application/xhtml+xml"/>
         <item href="text/ch03.xhtml" id="ch03" media-type="application/xhtml+xml"/>
+        <item href="text/cover.xhtml" id="cover" media-type="application/xhtml+xml"/>
         <item href="text/endnotes.xhtml" id="endnotes" media-type="application/xhtml+xml"/>
         <item href="text/epigraph.xhtml" id="epigraph" media-type="application/xhtml+xml"/>
         <item href="text/titlepage.xhtml" id="titlepage" media-type="application/xhtml+xml"/>
@@ -58,6 +59,7 @@
         <item href="images/ic_small.jpg" id="image-c-small" media-type="image/jpeg"/>
     </manifest>
     <spine toc="ncx">
+        <itemref idref="cover"/>
         <itemref idref="titlepage"/>
         <itemref idref="toc"/>
         <itemref idref="epigraph"/>
