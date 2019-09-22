@@ -38,9 +38,8 @@
         <item href="cover.jpg" id="cover-img" media-type="image/jpeg" properties="cover-image"/>
         <item href="cover.xhtml" id="cover" media-type="application/xhtml+xml"/>
         <item href="style.css" id="css" media-type="text/css"/>
+        <item href="local.css" id="local-css" media-type="text/css"/>
         <item href="toc.ncx" id="ncx" media-type="application/x-dtbncx+xml"/>
-        <item href="contributors.xhtml" id="contributors" media-type="application/xhtml+xml"/>
-        <item href="EPUB_logo.svg" id="epub-logo" media-type="image/svg+xml"/>
 
         <item href="text/afterword.xhtml" id="afterword" media-type="application/xhtml+xml"/>
         <item href="text/ch01.xhtml" id="ch01" media-type="application/xhtml+xml"/>
@@ -68,6 +67,5 @@
         <itemref idref="ch03"/>
         <itemref idref="afterword"/>
         <itemref idref="endnotes"/>
-        <itemref idref="contributors"/>
     </spine>
 </package>

@@ -241,7 +241,7 @@ em, cite, q, i {
 }
 
 q {
-    quotes: none;
+    quotes: none !important;
     font-style: italic !important;
 }
 
@@ -489,13 +489,16 @@ table.grid td {
     margin-top: 2.5rem;
 }
 
-.m-2 {
+.mb-2, .m-2 {
     margin-bottom: 2.5rem;
 }
 
-.m-3 {
-    margin-top: 5rem;
-    margin-bottom: 5rem;
+.mt-3, .m3 {
+    margin-top: 3.75rem;
+}
+
+.mb-3, .m-3 {
+    margin-bottom: 3.75rem;
 }
 
 .pt-1, .pt {

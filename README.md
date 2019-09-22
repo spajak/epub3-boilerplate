@@ -32,6 +32,11 @@ Validating using EPUB version 3.2 rules.
 No errors or warnings detected.
 ```
 
+## Common sections (epub:type):
+ - frontmatter: titlepage, halftitlepage, seriespage, acknowledgments, contributors, dedication
+ - bodymatter: foreword, abstract, preface, preamble, introduction, epigraph, prologue, part, chapter, footnote(s), epilogue, conclusion, afterword
+ - backmatter: appendix, bibliography, endnote(s), glossary
+
 ## Useful links
 
  - [EPUB Packages 3.2](https://www.w3.org/publishing/epub32/epub-packages.html)
