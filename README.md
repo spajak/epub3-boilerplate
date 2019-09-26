@@ -33,9 +33,9 @@ No errors or warnings detected.
 ```
 
 ## Common sections (epub:type):
- - frontmatter: titlepage, halftitlepage, seriespage, acknowledgments, contributors, dedication
- - bodymatter: foreword, abstract, preface, preamble, introduction, epigraph, prologue, part, chapter, footnote(s), epilogue, conclusion, afterword
- - backmatter: appendix, bibliography, endnote(s), glossary
+ - frontmatter: `titlepage`, `halftitlepage`, `seriespage`, `acknowledgments`, `contributors`, `dedication`
+ - bodymatter: `foreword`, `abstract`, `preface`, `preamble`, `introduction`, `epigraph`, `prologue`, `part`, `chapter`, `footnote(s)`, `epilogue`, `conclusion`, `afterword`
+ - backmatter: `appendix`, `bibliography`, `endnote(s)`, `glossary`
 
 ## Useful links
 
