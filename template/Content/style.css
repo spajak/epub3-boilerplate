@@ -1,6 +1,6 @@
 @charset "UTF-8";
 @page {
-    margin: 5mm 5mm 3mm 5mm;
+    margin: 2mm 5mm;
     padding: 0;
 }
 
@@ -273,13 +273,6 @@ sup {
     vertical-align: 35%;
 }
 
-a.noteref {
-    font-size: 0.75em;
-    line-height: 1.2;
-    vertical-align: super;
-    vertical-align: 25%;
-}
-
 code {
     white-space: pre;
     font-family: monospace;
@@ -438,6 +431,13 @@ table.grid td {
 }
 
 /* --------- Footnotes and endnotes classes --------------------------------- */
+.noteref {
+    font-size: 0.75em;
+    line-height: 1.2;
+    vertical-align: super;
+    vertical-align: 25%;
+}
+
 .footnotes {
     margin-top: 1rem;
 }

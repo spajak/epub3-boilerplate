@@ -29,10 +29,13 @@
         <dc:identifier>urn:isbn:9781566199094</dc:identifier>
         <dc:identifier>urn:goodreads:46170</dc:identifier>
         <dc:identifier>urn:lubimyczytac:49027</dc:identifier>
-        <dc:contributor>Sebastian Pająk</dc:contributor>
+        <dc:contributor id="producer">Sebastian Pająk</dc:contributor>
+            <meta refines="#producer" property="role" scheme="marc:relators">bkp</meta>
         <!-- Read time tip: an adult reads about 250 words per minute on an average -->
         <meta property="schema:wordCount">2123</meta>
         <meta property="schema:numberOfPages">10</meta>
+        <!-- ePub 2 cover -->
+        <meta name="cover" content="cover-img"/>
     </metadata>
     <manifest>
         <item href="cover.jpg" id="cover-img" media-type="image/jpeg" properties="cover-image"/>
