@@ -32,6 +32,11 @@ body {
     orphans: 2;
 }
 
+section, nav {
+    page-break-before: always;
+    page-break-after: always;
+}
+
 h1, h2, h3, h4, h5, h6 {
     text-align: left;
     line-height: 1.25;
