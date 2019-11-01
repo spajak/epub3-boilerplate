@@ -4,7 +4,7 @@
 
 ## Usage
 
-In order to build this e-book, [`7za`](https://www.7-zip.org/download.html) command line tool is required. To generate `mobi` file alonside, [kindlegen](https://www.amazon.com/gp/feature.html?ie=UTF8&docId=1000765211) should also be in your PATH.
+In order to build this e-book, [`7za`](https://www.7-zip.org/download.html) command line tool is required. To generate `mobi` file alongside, [kindlegen](https://www.amazon.com/gp/feature.html?ie=UTF8&docId=1000765211) should also be in your PATH.
 
 In PowerShell:
 
@@ -35,7 +35,7 @@ No errors or warnings detected.
 
 ## Asterism
 
-Due to poor Unicode and CSS support in e-readers, I found that best way to have a nice and versatile asterism is to use asterisk operator (U+2217) from Unicode Math category. Tested on Kindle and Kobo.
+Due to poor Unicode and CSS support in e-readers, I found that best way to have a nice and versatile asterism is to use asterisk operator (U+2217) from the Unicode Math category. Tested on Kindle and Kobo.
 
 ```html
 <div class="asterism large">∗ ∗ ∗</div>
