@@ -539,6 +539,13 @@ table.grid td {
     margin-right: auto;
 }
 
+.noteref {
+    font-size: 0.75em;
+    line-height: 1.2;
+    vertical-align: super;
+    vertical-align: 25%;
+}
+
 .box {
     margin: 1rem auto;
     padding: 0.3125rem 10pt;
