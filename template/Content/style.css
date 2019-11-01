@@ -108,7 +108,7 @@ blockquote {
     margin: 1rem 0;
     padding-left: 6pt;
     border: 0 none;
-    border-left: 0.1875rem solid currentColor;
+    border-left: 0.1875rem solid #808080;
 }
 
 /* Kindle specific */
@@ -155,6 +155,22 @@ ol {
     list-style-type: decimal;
 }
 
+ol.roman {
+    list-style-type: lower-roman;
+}
+
+ol.upper-roman {
+    list-style-type: upper-roman;
+}
+
+ol.latin {
+    list-style-type: lower-latin;
+}
+
+ol.upper-latin {
+    list-style-type: upper-latin;
+}
+
 ul {
     list-style-type: disc;
 }
@@ -184,17 +200,10 @@ li > ol, li > ul {
     margin-bottom: 0;
 }
 
-ol.off, ul.off, li.off, ol.p, ul.p {
+ol.off, ul.off, li.off {
     list-style-type: none;
-}
-
-ol.off, ul.off, ol.p, ul.p {
     padding: 0;
     margin-left: 0;
-}
-
-ol.p > li, ul.p > li {
-    margin: 0.75rem 0;
 }
 
 dt {
@@ -277,6 +286,7 @@ sup {
 
 code {
     white-space: pre;
+    text-align: left;
     font-family: monospace;
 }
 
@@ -336,26 +346,28 @@ td, th {
     vertical-align: baseline;
 }
 
+@media only amzn-kf8, amzn-mobi {
+    th, td {
+        padding-right: 10pt;
+    }
+}
+
 caption {
     font-size: 0.875rem;
     margin: 0.25rem auto;
     text-align: center;
 }
 
-/* Table caption position (<caption> must be the first element in <table>)
-   Kindle: Setting caption-side breaks "Enhanced Typesetting"! */
+/*
+Table caption position (<caption> must be the first element in <table>).
+Kindle: Setting caption-side breaks "Enhanced Typesetting"!
+*/
 caption.top {
     caption-side: top;
 }
 
 caption.bottom {
     caption-side: bottom;
-}
-
-@media only amzn-kf8, amzn-mobi {
-    th, td {
-        padding-right: 10pt;
-    }
 }
 
 /* --------- Grid table classes --------------------------------------------- */
@@ -380,97 +392,7 @@ table.grid td {
     }
 }
 
-/* --------- Asterism classes ----------------------------------------------- */
-.asterism,
-.asterism-1,
-.asterism-3,
-.asterism-6 {
-    display: block;
-    text-align: center !important;
-    font-size: 1rem;
-    line-height: 1.2;
-    margin: 1.5rem auto;
-    page-break-after: avoid;
-}
-
-.asterism:before, .asterism-1:before {
-    font-size: 1.125em;
-    content: '\2042'; /* ⁂ (U+2042) */
-}
-
-.asterism-3:before {
-    content: '\273B\2002\273B\2002\273B'; /* ✻ ✻ ✻ (U+273B) */
-}
-
-.asterism-6:before {
-    content: '\2015\2015\2002//\2002\2015\2015'; /* ―― // ―― (U+2015) */
-}
-
-/* --------- Box classes ---------------------------------------------------- */
-.box {
-    margin: 1rem auto;
-    padding: 0.3125rem 8pt;
-    border: 0.125rem solid currentColor;
-}
-
-@media only amzn-kf8 {
-    .box {
-        padding-left: 10pt;
-        padding-right: 10pt;
-    }
-}
-
-/* --------- Drop cap classes ----------------------------------------------- */
-.drop-cap:first-letter {
-    float: left;
-    font-size: 3.5em;
-    font-weight: bold;
-    text-indent: 0;
-    line-height: 1.2;
-    margin-top: -0.1725em;
-    margin-bottom: -0.1875em;
-    margin-right: 0.1375em;
-}
-
-/* --------- Footnotes and endnotes classes --------------------------------- */
-.noteref {
-    font-size: 0.75em;
-    line-height: 1.2;
-    vertical-align: super;
-    vertical-align: 25%;
-}
-
-.footnotes {
-    margin-top: 1rem;
-}
-
-.footnotes > aside {
-    font-size: 0.8125rem;
-    margin: 0;
-}
-
-.endnotes > aside {
-    font-size: 0.875rem;
-    margin: 0.5rem;
-}
-
 /* --------- Utility classes ------------------------------------------------ */
-.brb {
-    page-break-before: always;
-}
-
-.no-brb {
-    page-break-before: avoid;
-}
-
-.bra {
-    page-break-after: always;
-}
-
-.no-bra {
-    page-break-after: avoid;
-}
-
 .mt-0, .m-0 {
     margin-top: 0;
 }
@@ -511,8 +433,30 @@ table.grid td {
     padding-top: 2.5rem;
 }
 
-.bt {
-    border-top: 1rem solid transparent;
+.m-s-1 {
+    margin-top: 0.75rem;
+    margin-bottom: 0.75rem;
+}
+
+.m-s-2 {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.brb {
+    page-break-before: always;
+}
+
+.no-brb {
+    page-break-before: avoid;
+}
+
+.bra {
+    page-break-after: always;
+}
+
+.no-bra {
+    page-break-after: avoid;
 }
 
 .i {
@@ -523,11 +467,7 @@ table.grid td {
     font-weight: bold;
 }
 
-.center, .c, .c-c {
-    text-align: center;
-}
-
-.c-c > * {
+.center, .c {
     text-align: center;
 }
 
@@ -555,6 +495,24 @@ table.grid td {
     font-size: 0.75em;
 }
 
+.large-1, .large {
+    font-size: 1.5em;
+}
+
+.large-2 {
+    font-size: 1.75em;
+}
+
+.pad {
+    padding-left: 24pt;
+}
+
+.asterism {
+    text-align: center;
+    line-height: 1.2;
+    margin: 2rem 0;
+}
+
 .reset {
     font-style: normal;
     font-weight: normal;
@@ -570,6 +528,21 @@ table.grid td {
 
 .small-caps {
     font-variant: small-caps;
+}
+
+.border-top {
+    border-top: 1rem solid transparent;
+}
+
+.block-center {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.box {
+    margin: 1rem auto;
+    padding: 0.3125rem 10pt;
+    border: 0.125rem solid currentColor;
 }
 
 .w-100 { width: 100%; }
