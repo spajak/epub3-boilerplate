@@ -11,4 +11,4 @@ Remove-Item "000.000"
 # Generate mobi
 $mobiFile = "template.mobi"
 Write-Host "Building MOBI ($mobiFile).."
-& kindlegen "$epubFile" -o "$mobiFile"
+& kindlegen -dont_append_source "$epubFile" -o "$mobiFile"

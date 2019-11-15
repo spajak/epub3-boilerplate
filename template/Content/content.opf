@@ -19,40 +19,43 @@
             <meta refines="#creator" property="file-as">Author, The Book's</meta>
         <dc:description xml:lang="en">Very good book about everything what is in The Universe</dc:description>
         <dc:description xml:lang="pl">Świetna książka o wszystkich rzeczach we Wszechświecie</dc:description>
-        <dc:date>2017-03-01</dc:date>
-        <dc:publisher>Home Publishing</dc:publisher>
         <dc:type>Text</dc:type>
         <dc:subject>Dark Ages</dc:subject>
         <dc:subject>The Holy Grail</dc:subject>
         <meta id="series" property="belongs-to-collection">My Books Collection</meta>
             <meta refines="#series" property="collection-type">series</meta>
+        <!-- Publication info -->
+        <dc:publisher>Home Publishing</dc:publisher>
+        <dc:date>2017-03-01</dc:date>
         <dc:identifier>urn:isbn:9781566199094</dc:identifier>
         <dc:identifier>urn:goodreads:46170</dc:identifier>
         <dc:identifier>urn:lubimyczytac:49027</dc:identifier>
+        <meta property="schema:numberOfPages">10</meta>
+        <!-- The person who created this e-book package -->
         <dc:contributor id="producer">Sebastian Pająk</dc:contributor>
             <meta refines="#producer" property="role" scheme="marc:relators">bkp</meta>
         <!-- Read time tip: an adult reads about 250 words per minute on an average -->
         <meta property="schema:wordCount">2123</meta>
-        <meta property="schema:numberOfPages">10</meta>
         <!-- ePub 2 cover -->
-        <meta name="cover" content="cover-img"/>
+        <meta name="cover" content="cover.jpg"/>
     </metadata>
     <manifest>
-        <item href="cover.jpg" id="cover-img" media-type="image/jpeg" properties="cover-image"/>
+        <item href="cover.jpg" id="cover.jpg" media-type="image/jpeg" properties="cover-image"/>
         <item href="cover.xhtml" id="cover" media-type="application/xhtml+xml"/>
-        <item href="style.css" id="css" media-type="text/css"/>
-        <item href="local.css" id="local-css" media-type="text/css"/>
+        <item href="style.css" id="style.css" media-type="text/css"/>
+        <item href="local.css" id="local.css" media-type="text/css"/>
+        <item href="text/toc.xhtml" id="toc" media-type="application/xhtml+xml" properties="nav"/>
+        <item href="text/titlepage.xhtml" id="titlepage" media-type="application/xhtml+xml"/>
+        <!-- ePub 2 toc -->
         <item href="toc.ncx" id="ncx" media-type="application/x-dtbncx+xml"/>
-
+        <!-- Main content -->
         <item href="text/afterword.xhtml" id="afterword" media-type="application/xhtml+xml"/>
         <item href="text/ch01.xhtml" id="ch01" media-type="application/xhtml+xml"/>
         <item href="text/ch02.xhtml" id="ch02" media-type="application/xhtml+xml"/>
         <item href="text/ch03.xhtml" id="ch03" media-type="application/xhtml+xml"/>
         <item href="text/endnotes.xhtml" id="endnotes" media-type="application/xhtml+xml"/>
         <item href="text/epigraph.xhtml" id="epigraph" media-type="application/xhtml+xml"/>
-        <item href="text/titlepage.xhtml" id="titlepage" media-type="application/xhtml+xml"/>
-        <item href="text/toc.xhtml" id="toc" media-type="application/xhtml+xml" properties="nav"/>
-
+        <!-- Media files -->
         <item href="images/ia.jpg" id="image-a" media-type="image/jpeg"/>
         <item href="images/ib.jpg" id="image-b" media-type="image/jpeg"/>
         <item href="images/ic.jpg" id="image-c" media-type="image/jpeg"/>
