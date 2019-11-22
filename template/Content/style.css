@@ -6,6 +6,7 @@
 
 article,
 aside,
+blockquote,
 figure,
 figcaption,
 footer,
@@ -83,11 +84,6 @@ h1.chapter, h2.chapter, h3.chapter, h4.chapter {
     margin: 2.5em 0;
 }
 
-aside {
-    font-size: 0.8125rem;
-    margin: 1rem 0;
-}
-
 /* ------- Content grouping ------------------------------------------------- */
 p {
     margin: 1rem 0;
@@ -104,9 +100,9 @@ p.classic, .classic p + p {
 }
 
 blockquote {
-    display: block;
-    margin: 1rem 0;
-    padding-left: 6pt;
+    padding-left: 10pt;
+    margin-left: 0;
+    margin-right: 0;
     border: 0 none;
     border-left: 0.1875rem solid #808080;
 }
@@ -114,7 +110,7 @@ blockquote {
 /* Kindle specific */
 @media only amzn-kf8, amzn-mobi {
     blockquote {
-        padding-left: 10pt;
+        padding-left: 14pt;
     }
 }
 
@@ -131,7 +127,6 @@ figure {
 }
 
 figcaption {
-    display: block;
     margin: 0.25rem auto;
     font-size: 0.875rem;
     text-align: center;
@@ -139,11 +134,11 @@ figcaption {
 
 dl, ol, ul, pre {
     margin: 1rem 0;
-    text-align: left;
 }
 
 pre {
     tab-size: 2;
+    text-align: left;
 }
 
 ul, ol {
@@ -300,9 +295,9 @@ code.block {
 
 /* ---------- Image (inline) ------------------------------------------------ */
 img {
-    width: auto;
     max-width: 100%;
     height: auto;
+    width: auto;
     object-fit: contain;
     vertical-align: bottom;
 }
@@ -548,7 +543,7 @@ table.grid td {
 
 .box {
     margin: 1rem auto;
-    padding: 0.3125rem 10pt;
+    padding: 0.625rem 12pt;
     border: 0.125rem solid currentColor;
 }
 

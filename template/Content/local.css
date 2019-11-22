@@ -1,1 +1,34 @@
 @import "style.css";
+
+/* Customize stylesheet here */
+ul, ol {
+    text-align: left;
+}
+
+aside p {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    font-size: 0.8125rem;
+}
+
+blockquote p {
+    font-style: italic;
+    text-align: left;
+}
+
+p.v {
+    font-style: italic;
+}
+
+p.v span {
+    display: block;
+}
+
+.c-c > * {
+    text-align: center;
+}
+
+.p-1-2 p {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
