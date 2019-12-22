@@ -99,6 +99,10 @@ p.classic, .classic p + p {
     text-indent: 1.25rem;
 }
 
+p.no-indent {
+    text-indent: 0;
+}
+
 blockquote {
     padding-left: 10pt;
     margin-left: 0;
@@ -296,8 +300,7 @@ code.block {
 /* ---------- Image (inline) ------------------------------------------------ */
 img {
     max-width: 100%;
-    height: auto;
-    width: auto;
+    max-height: 100%;
     object-fit: contain;
     vertical-align: bottom;
 }
@@ -505,7 +508,7 @@ table.grid td {
 .asterism {
     text-align: center;
     line-height: 1.2;
-    margin: 2rem 0;
+    margin: 1.75rem 0;
 }
 
 .reset {
