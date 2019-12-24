@@ -8,30 +8,33 @@
 </head>
 <docTitle><text>The Book's Title</text></docTitle>
 <navMap>
+    <navPoint id="nav-front">
+        <navLabel><text>Front</text></navLabel>
+        <content src="cover.xhtml"/>
+    </navPoint>
+    <navPoint id="nav-prologue">
+        <navLabel><text>Prologue</text></navLabel>
+        <content src="text/prologue.xhtml"/>
+    </navPoint>
     <navPoint id="nav-1">
         <navLabel><text>Bring Out Your Dead</text></navLabel>
         <content src="text/ch01.xhtml"/>
     </navPoint>
-
     <navPoint id="nav-2">
         <navLabel><text>We've Got a Witch</text></navLabel>
         <content src="text/ch02.xhtml"/>
     </navPoint>
-
     <navPoint id="nav-3">
         <navLabel><text>Swamps Suck Castles</text></navLabel>
         <content src="text/ch03.xhtml"/>
     </navPoint>
-
-    <navPoint id="nav-4">
-        <navLabel><text>Afterword</text></navLabel>
-        <content src="text/afterword.xhtml"/>
+    <navPoint id="nav-epilogue">
+        <navLabel><text>Epilogue</text></navLabel>
+        <content src="text/epilogue.xhtml"/>
     </navPoint>
-
-    <navPoint id="nav-5">
+    <navPoint id="nav-notes">
         <navLabel><text>Notes</text></navLabel>
         <content src="text/endnotes.xhtml"/>
     </navPoint>
-
 </navMap>
 </ncx>

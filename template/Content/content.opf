@@ -35,7 +35,7 @@
         <dc:contributor id="producer">Sebastian Pająk</dc:contributor>
             <meta refines="#producer" property="role" scheme="marc:relators">bkp</meta>
         <!-- Read time tip: an adult reads about 250 words per minute on an average -->
-        <meta property="schema:wordCount">2123</meta>
+        <meta property="schema:wordCount">2344</meta>
         <!-- ePub 2 cover -->
         <meta name="cover" content="cover.jpg"/>
     </metadata>
@@ -49,29 +49,28 @@
         <!-- ePub 2 toc -->
         <item href="toc.ncx" id="ncx" media-type="application/x-dtbncx+xml"/>
         <!-- Main content -->
-        <item href="text/afterword.xhtml" id="afterword" media-type="application/xhtml+xml"/>
         <item href="text/ch01.xhtml" id="ch01" media-type="application/xhtml+xml"/>
         <item href="text/ch02.xhtml" id="ch02" media-type="application/xhtml+xml"/>
         <item href="text/ch03.xhtml" id="ch03" media-type="application/xhtml+xml"/>
         <item href="text/endnotes.xhtml" id="endnotes" media-type="application/xhtml+xml"/>
         <item href="text/epigraph.xhtml" id="epigraph" media-type="application/xhtml+xml"/>
+        <item href="text/epilogue.xhtml" id="epilogue" media-type="application/xhtml+xml"/>
+        <item href="text/prologue.xhtml" id="prologue" media-type="application/xhtml+xml"/>
         <!-- Media files -->
-        <item href="images/ia.jpg" id="image-a" media-type="image/jpeg"/>
-        <item href="images/ib.jpg" id="image-b" media-type="image/jpeg"/>
-        <item href="images/ic.jpg" id="image-c" media-type="image/jpeg"/>
-        <item href="images/ia_small.jpg" id="image-a-small" media-type="image/jpeg"/>
-        <item href="images/ib_small.jpg" id="image-b-small" media-type="image/jpeg"/>
-        <item href="images/ic_small.jpg" id="image-c-small" media-type="image/jpeg"/>
+        <item href="images/img-01.jpg" id="img-01.jpg" media-type="image/jpeg"/>
+        <item href="images/img-02.jpg" id="img-02.jpg" media-type="image/jpeg"/>
+        <item href="images/img-03.jpg" id="img-03.jpg" media-type="image/jpeg"/>
     </manifest>
     <spine toc="ncx">
         <itemref idref="cover"/>
         <itemref idref="titlepage"/>
         <itemref idref="toc"/>
         <itemref idref="epigraph"/>
+        <itemref idref="prologue"/>
         <itemref idref="ch01"/>
         <itemref idref="ch02"/>
         <itemref idref="ch03"/>
-        <itemref idref="afterword"/>
+        <itemref idref="epilogue"/>
         <itemref idref="endnotes"/>
     </spine>
 </package>

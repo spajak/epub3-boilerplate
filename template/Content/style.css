@@ -17,9 +17,7 @@ section {
     display: block;
 }
 
-/* ------- Sections ------------------------------------------------------------
-    <body>, <section>, <nav>, <h1> - <h6> // <article>, <aside>, <header>, <footer>
-*/
+/* ------- Sections ----------------------------------------------------------*/
 body {
     font-size: 100%;
     font-weight: normal;
@@ -79,11 +77,6 @@ h6 {
     font-style: italic;
 }
 
-h1.chapter, h2.chapter, h3.chapter, h4.chapter {
-    text-align: center;
-    margin: 2.5em 0;
-}
-
 /* ------- Content grouping ------------------------------------------------- */
 p {
     margin: 1rem 0;
@@ -99,23 +92,12 @@ p.classic, .classic p + p {
     text-indent: 1.25rem;
 }
 
-p.no-indent {
-    text-indent: 0;
-}
-
 blockquote {
     padding-left: 10pt;
     margin-left: 0;
     margin-right: 0;
     border: 0 none;
     border-left: 0.1875rem solid #808080;
-}
-
-/* Kindle specific */
-@media only amzn-kf8, amzn-mobi {
-    blockquote {
-        padding-left: 14pt;
-    }
 }
 
 blockquote.fancy {
@@ -136,13 +118,8 @@ figcaption {
     text-align: center;
 }
 
-dl, ol, ul, pre {
+ol, ul, dl, pre {
     margin: 1rem 0;
-}
-
-pre {
-    tab-size: 2;
-    text-align: left;
 }
 
 ul, ol {
@@ -178,22 +155,6 @@ ul ul {
     list-style-type: circle;
 }
 
-dd {
-    padding: 0;
-    margin: 0;
-    margin-left: 24pt;
-}
-
-@media only amzn-kf8, amzn-mobi {
-    ul, ol {
-        padding-left: 32pt;
-    }
-
-    dd {
-        margin-left: 32pt;
-    }
-}
-
 li > ol, li > ul {
     margin-top: 0;
     margin-bottom: 0;
@@ -213,6 +174,21 @@ dt:after {
     content: ": ";
 }
 
+dd {
+    padding: 0;
+    margin: 0;
+    margin-left: 24pt;
+}
+
+pre {
+    tab-size: 2;
+    text-align: left;
+    display: block;
+    white-space: pre-wrap;
+    font-size: 0.8125em;
+    line-height: 1.25;
+}
+
 hr {
     height: 0;
     width: auto;
@@ -228,22 +204,38 @@ hr {
     display: none;
 }
 
-/* ------- Text (inline) -------------------------------------------------------
-    <em>       - stress emphasis
-    <strong>   - strong importance, seriousness, or urgency
-    <small>    - side comments such as small print
-    <s>        - no longer accurate or no longer relevant
-    <cite>     - reference to a creative work
-    <q>        - quotation from another source (its address may be specified in cite attribute)
-    <dfn>      - term being defined
-    <abbr>     - abbreviation or acronym (optionally with its expansion in title attribute)
-    <code>     - fragment of computer code
-    <sub>      - subscript
-    <sup>      - superscript
-    <i>        - technical terms, foreign language phrases, thoughts etc.
-    <b>        - draw attention
-    <u>        - non-textual annotation
-    <mark>     - highlight for reference purposes
+/* Kindle specific */
+@media only amzn-kf8, amzn-mobi {
+    blockquote {
+        padding-left: 14pt;
+    }
+
+    ul, ol {
+        padding-left: 32pt;
+    }
+
+    dd {
+        margin-left: 32pt;
+    }
+}
+
+/* ------- Text (inline) -----------------------------------------------------*/
+/*
+    <em>      - stress emphasis
+    <strong>  - strong importance, seriousness, or urgency
+    <small>   - side comments such as small print
+    <s>       - no longer accurate or no longer relevant
+    <cite>    - reference to a creative work
+    <q>       - quotation from another source (its address may be specified in cite attribute)
+    <dfn>     - term being defined
+    <abbr>    - abbreviation or acronym (optionally with its expansion in title attribute)
+    <code>    - fragment of computer code
+    <sub>     - subscript
+    <sup>     - superscript
+    <i>       - technical terms, foreign language phrases, thoughts etc.
+    <b>       - draw attention
+    <u>       - non-textual annotation
+    <mark>    - highlight for reference purposes
 */
 
 em, cite, q, i {
@@ -287,14 +279,6 @@ code {
     white-space: pre;
     text-align: left;
     font-family: monospace;
-}
-
-code.block {
-    display: block;
-    white-space: pre-wrap;
-    font-size: 0.8125em;
-    line-height: 1.2;
-    margin: 1rem 0;
 }
 
 /* ---------- Image (inline) ------------------------------------------------ */
@@ -345,21 +329,20 @@ td, th {
 }
 
 @media only amzn-kf8, amzn-mobi {
-    th, td {
+    td, th {
         padding-right: 10pt;
     }
 }
 
+/* --------- Table caption -------------------------------------------------- */
+/* <caption> must be the first element in <table> */
 caption {
     font-size: 0.875rem;
     margin: 0.25rem auto;
     text-align: center;
 }
 
-/*
-Table caption position (<caption> must be the first element in <table>).
-Kindle: Setting caption-side breaks "Enhanced Typesetting"!
-*/
+/* Kindle: setting caption-side breaks "Enhanced Typesetting"! */
 caption.top {
     caption-side: top;
 }
@@ -368,7 +351,7 @@ caption.bottom {
     caption-side: bottom;
 }
 
-/* --------- Grid table classes --------------------------------------------- */
+/* --------- Grid table class ----------------------------------------------- */
 table.grid {
     border: 0.125rem solid currentColor;
 }
@@ -431,14 +414,19 @@ table.grid td {
     padding-top: 2.5rem;
 }
 
-.m-s-1 {
+.m-s-1, .m-3-4 {
     margin-top: 0.75rem;
     margin-bottom: 0.75rem;
 }
 
-.m-s-2 {
+.m-s-2, .m-1-2 {
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
+}
+
+.m-s-3, .m-1-5 {
+    margin-top: 0.2rem;
+    margin-bottom: 0.2rem;
 }
 
 .brb {
@@ -494,21 +482,27 @@ table.grid td {
 }
 
 .large-1, .large {
-    font-size: 1.5em;
+    font-size: 1.25em;
 }
 
 .large-2 {
+    font-size: 1.5em;
+}
+
+.large-3 {
     font-size: 1.75em;
+}
+
+.indent {
+    text-indent: 1.25rem;
+}
+
+.no-indent {
+    text-indent: 0;
 }
 
 .pad {
     padding-left: 24pt;
-}
-
-.asterism {
-    text-align: center;
-    line-height: 1.2;
-    margin: 1.75rem 0;
 }
 
 .reset {
@@ -528,13 +522,15 @@ table.grid td {
     font-variant: small-caps;
 }
 
-.border-top {
-    border-top: 1rem solid transparent;
-}
-
-.block-center {
+.m-a {
     margin-left: auto;
     margin-right: auto;
+}
+
+.asterism {
+    text-align: center;
+    line-height: 1.2;
+    margin: 1.75rem 0;
 }
 
 .noteref {
