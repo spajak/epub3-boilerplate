@@ -8,8 +8,8 @@
 </head>
 <docTitle><text>The Book's Title</text></docTitle>
 <navMap>
-    <navPoint id="nav-front">
-        <navLabel><text>Front</text></navLabel>
+    <navPoint id="nav-cover">
+        <navLabel><text>Cover</text></navLabel>
         <content src="cover.xhtml"/>
     </navPoint>
     <navPoint id="nav-prologue">

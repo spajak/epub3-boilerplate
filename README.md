@@ -2,7 +2,7 @@
 
 [EPUB version 3.2](https://www.w3.org/publishing/epub32/epub-spec.html) template with simplistic, yet universal `css` stylesheet.
 
-## Usage
+## Build
 
 In order to build this e-book, [`7za`](https://www.7-zip.org/download.html) command line tool is required. To generate `mobi` file alongside, [kindlegen](https://www.amazon.com/gp/feature.html?ie=UTF8&docId=1000765211) should also be in your PATH.
 
