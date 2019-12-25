@@ -36,20 +36,20 @@ aside p {
 
 .chapter {
     text-align: center;
-    margin-top: 1.875em;
-    margin-bottom: 2.25em;
+    margin-top: 2em;
+    margin-bottom: 2.5em;
 }
 
 .chapter-1-2 {
     text-align: center;
-    margin-top: 1.375em;
+    margin-top: 1.5em;
     margin-bottom: 0.5em;
 }
 
 .chapter-2-2 {
     text-align: center;
     margin-top: 0.5em;
-    margin-bottom: 2.25em;
+    margin-bottom: 2.5em;
 }
 
 .p-1-2 p {
