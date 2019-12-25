@@ -25,6 +25,12 @@ aside p {
     display: block;
 }
 
+.verses > p {
+    margin-top: 0;
+    margin-bottom: 0;
+    text-indent: 0;
+}
+
 .p-classic > p {
     margin-bottom: 0;
 }
@@ -37,7 +43,7 @@ aside p {
 .chapter {
     text-align: center;
     margin-top: 2em;
-    margin-bottom: 2.5em;
+    margin-bottom: 2.75em;
 }
 
 .chapter-1-2 {
@@ -49,7 +55,7 @@ aside p {
 .chapter-2-2 {
     text-align: center;
     margin-top: 0.5em;
-    margin-bottom: 2.5em;
+    margin-bottom: 2.75em;
 }
 
 .p-1-2 p {
