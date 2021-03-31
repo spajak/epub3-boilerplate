@@ -31,6 +31,9 @@
         <dc:identifier>urn:goodreads:46170</dc:identifier>
         <dc:identifier>urn:lubimyczytac:49027</dc:identifier>
         <meta property="schema:numberOfPages">10</meta>
+        <!-- Person who translated this book -->
+        <dc:contributor id="translator">Joe Translator</dc:contributor>
+            <meta refines="#translator" property="role" scheme="marc:relators">trl</meta>
         <!-- The person who created this e-book package -->
         <dc:contributor id="producer">Sebastian Pająk</dc:contributor>
             <meta refines="#producer" property="role" scheme="marc:relators">bkp</meta>

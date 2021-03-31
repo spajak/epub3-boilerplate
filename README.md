@@ -17,7 +17,7 @@ This outputs two files: `template.epub` and `template.mobi` for Kindle.
 Validate the package file with [`epubcheck`](https://github.com/w3c/epubcheck):
 
 ```
-$ java -jar "./epubcheck.jar" "./template.epub"
+$ java -jar "/path/to/epubcheck.jar" "./template.epub"
 ```
 
 ## Reading time
@@ -40,17 +40,19 @@ Due to poor Unicode and CSS support in most e-readers, I found that the best way
 
 ## Fonts
 
-Top 3 fonts ideal for long reading in my opinion:
+My favourite serif fonts for long reading:
 
-- **Bookerly** – Default Kindle font. This is the main reason **not** to embed any serif fonts in epub package, but to leave e-reader's default.
-- [Literata](https://github.com/googlefonts/literata) – Google's font. Very nice looking.
+- Bookerly – Default Kindle font. This is the main reason *not* to embed any serif fonts in epub package, but to leave e-reader's default.
+- [Literata](https://github.com/googlefonts/literata) – Google font (free).
+- [Crimson Pro](https://fontsarena.com/crimson-pro-by-sebastian-kosch-jacques-le-bailly/) – Sebastian Kosch & Jacques Le Bailly (free).
 - [Georgia](https://docs.microsoft.com/typography/font-list/georgia) – Classic font from Microsoft.
 
-## Common sections (epub:type):
+## Common sections (epub:type) reference:
 
 - frontmatter: `titlepage`, `halftitlepage`, `seriespage`, `acknowledgments`, `contributors`, `dedication`
-- bodymatter: `foreword`, `abstract`, `preface`, `preamble`, `introduction`, `epigraph`, `prologue`, `part`, `chapter`, `footnote(s)`, `epilogue`, `conclusion`, `afterword`
-- backmatter: `appendix`, `bibliography`, `endnote(s)`, `glossary`
+- bodymatter: `foreword`, `abstract`, `preface`, `preamble`, `introduction`, `epigraph`, `prologue`, `part`, `chapter`, `epilogue`, `conclusion`, `afterword`
+- notes (backmatter): `footnote(s)`, `endnote(s)`, `noteref`, `backlink`
+- backmatter: `appendix`, `bibliography`, `glossary`
 
 ## EPUB packaging script
 
@@ -60,5 +62,5 @@ I have created a PowerShell script (command line) to build epub package file fro
 
 - [EPUB Packages 3.2](https://www.w3.org/publishing/epub32/epub-packages.html)
 - [EPUB Content Documents 3.2](https://www.w3.org/publishing/epub32/epub-contentdocs.html)
-- [EPUB 3 Structural Semantics Vocabulary](https://idpf.github.io/epub-vocabs/structure/)
+- [EPUB Structural Semantics Vocabulary](https://idpf.github.io/epub-vocabs/structure/)
 - [DCMI Metadata Terms](http://www.dublincore.org/specifications/dublin-core/dcmi-terms/)

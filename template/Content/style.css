@@ -161,6 +161,7 @@ ol.off, ul.off, li.off {
 
 dt {
     font-weight: bold;
+    text-align: left;
 }
 
 dt:after {
@@ -375,6 +376,8 @@ table.grid td {
     line-height: 1.2;
     vertical-align: super;
     vertical-align: 25%;
+    font-style: normal;
+    font-weight: normal;
 }
 
 .box {
