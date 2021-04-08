@@ -4,7 +4,9 @@
 
 ## Build
 
-In order to build this e-book, [`7za`](https://www.7-zip.org/download.html) command line tool is required. To generate `mobi` file alongside, [`kindlegen`](https://www.amazon.com/kindleformat/kindlegen) tool should also be in your PATH.
+In order to build this e-book, [`7za`](https://www.7-zip.org/download.html) command line tool is required. To generate `mobi` file alongside, [`kindlegen`](https://www.amazon.com/kindleformat/kindlegen)* tool should also be in your PATH.
+
+\* kindlegen has been discontinued. But Windows binary is provided in the releases of this repo.
 
 In [PowerShell](https://github.com/PowerShell/PowerShell):
 
@@ -20,15 +22,31 @@ Validate the package file with [`epubcheck`](https://github.com/w3c/epubcheck):
 $ java -jar "/path/to/epubcheck.jar" "./template.epub"
 ```
 
-## Reading time
+## Word count
 
-Nice feature is to have a reading time hint. This can be calculated as a number of words divided by an average reading speed (250 words per minute for an adult). To get the number of words use provided PHP script:
+To get the number of words from html source use the provided PHP script:
 
 ```
 $ php ./count-words.php "./template/Content/text/ch*.xhtml"
 ```
 
-Use the number in `<meta property="schema:wordCount">xxx</meta>` metadata field.
+Use the number in OPF:
+
+```html
+    <meta property="schema:wordCount">{{word_count}}</meta>
+```
+
+### Reading time hint
+
+This can be calculated as a number of words divided by an average reading speed (250 words per minute for an adult).
+
+### Words per page
+
+In novels there are around 250-350 words per page.
+
+```html
+    <meta property="schema:numberOfPages">{{number_of_pages}}</meta>
+```
 
 ## Asterism
 
@@ -46,13 +64,20 @@ My favourite serif fonts for long reading:
 - [Literata](https://github.com/googlefonts/literata) – Google font (free).
 - [Crimson Pro](https://fontsarena.com/crimson-pro-by-sebastian-kosch-jacques-le-bailly/) – Sebastian Kosch & Jacques Le Bailly (free).
 - [Georgia](https://docs.microsoft.com/typography/font-list/georgia) – Classic font from Microsoft.
+- [EB Garamond](https://github.com/octaviopardo/EBGaramond12) - Old looking font (free).
 
 ## Common sections (epub:type) reference:
 
 - frontmatter: `titlepage`, `halftitlepage`, `seriespage`, `acknowledgments`, `contributors`, `dedication`
 - bodymatter: `foreword`, `abstract`, `preface`, `preamble`, `introduction`, `epigraph`, `prologue`, `part`, `chapter`, `epilogue`, `conclusion`, `afterword`
-- notes (backmatter): `footnote(s)`, `endnote(s)`, `noteref`, `backlink`
+- notes: `footnote(s)`, `endnote(s)`, `noteref`, `backlink`
 - backmatter: `appendix`, `bibliography`, `glossary`
+
+### foreword, preface and introduction (epub:type)
+
+- A foreword is written by someone other than the author and tells the readers why they should read the book.
+- A preface is written by the author and tells readers how and why the book came into being.
+- An introduction introduces readers to the main topics of the manuscript and prepares readers for what they can expect.
 
 ## EPUB packaging script
 
