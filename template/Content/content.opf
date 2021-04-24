@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- https://www.w3.org/publishing/epub32/epub-packages.html -->
 <package xmlns="http://www.idpf.org/2007/opf" unique-identifier="pub-id" version="3.0">
-    <!-- https://www.w3.org/publishing/epub32/epub-packages.html -->
     <!-- https://github.com/spajak/epub3-boilerplate -->
     <metadata xmlns:dc="http://purl.org/dc/elements/1.1/">
         <dc:identifier id="pub-id">urn:uuid:ff375c52-1160-4dc2-9d41-324277b8c78f</dc:identifier>
@@ -24,6 +24,7 @@
         <dc:subject>The Holy Grail</dc:subject>
         <meta id="series" property="belongs-to-collection">My Books Collection</meta>
             <meta refines="#series" property="collection-type">series</meta>
+            <meta refines="#series" property="group-position">1</meta>
         <!-- Publication info -->
         <dc:publisher>Home Publishing</dc:publisher>
         <dc:date>2017-03-01</dc:date>
@@ -70,6 +71,7 @@
         <itemref idref="cover"/>
         <itemref idref="titlepage"/>
         <itemref idref="toc"/>
+        <!-- Main content -->
         <itemref idref="holy-grail"/>
         <itemref idref="epigraph"/>
         <itemref idref="prologue"/>
