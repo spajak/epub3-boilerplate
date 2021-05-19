@@ -2,59 +2,60 @@
 
 [EPUB version 3.2](https://www.w3.org/publishing/epub32/epub-spec.html) template, including simplistic, yet universal `css` stylesheet.
 
-## Build
+## Build EPUB file
 
-In order to build this e-book, [`7za`](https://www.7-zip.org/download.html) command line tool is required. To generate `mobi` file alongside, [`kindlegen`](https://www.amazon.com/kindleformat/kindlegen)* tool should also be in your PATH.
-
-\* kindlegen has been discontinued. But Windows binary is provided in the releases of this repo.
-
-In [PowerShell](https://github.com/PowerShell/PowerShell):
+I use my [PowerShell](https://github.com/PowerShell/PowerShell) script [build-epub.ps1](https://gist.github.com/spajak/a6699005d9648696fbdda1d545153a38) to build an epub package file from a given source directory. In order to do so place the script in PATH and execute this command from a PowerShell to build "template.epub" from the template:
 
 ```
-$ ./build.ps1
+$ build-epub.ps1 ".\template"
 ```
 
-This outputs two files: `template.epub` and `template.mobi` for Kindle.
-
-Validate the package file with [`epubcheck`](https://github.com/w3c/epubcheck):
+It can also be done using [7za](https://www.7-zip.org/download.html) command line tool. In PowerShell, execute [build.ps1](https://github.com/spajak/epub3-boilerplate/blob/master/build.ps1) script from within this repo:
 
 ```
-$ java -jar "/path/to/epubcheck.jar" "./template.epub"
+$ .\build.ps1
 ```
 
-## Word count
+#### Kindle
+
+Kindle does not support EPUB e-books yet. Using [kindlegen](https://www.amazon.com/kindleformat/kindlegen)*, here is the command to build .mobi file from .epub:
+
+```
+& kindlegen -dont_append_source "template.epub"
+```
+
+\* kindlegen has been discontinued, but Windows binary is provided in the releases of this repo.
+
+### Validation
+
+Always validate a resulting EPUB (.epub) file with [epubcheck](https://github.com/w3c/epubcheck):
+
+```
+$ java -jar "/path/to/epubcheck.jar" "template.epub"
+```
+
+## Words per page & word count metadata
+
+I use schema.org [numberOfPages](https://schema.org/numberOfPages) and [wordCount](https://schema.org/wordCount) fields in package metadatada:
+
+```html
+<meta property="schema:numberOfPages">{{number_of_pages}}</meta>
+<meta property="schema:wordCount">{{word_count}}</meta>
+```
 
 To get the number of words from html source use the provided PHP script:
 
 ```
-$ php ./count-words.php "./template/Content/text/ch*.xhtml"
+$ php ./count-words.php "./template/Content/ch*.xhtml"
 ```
 
-Use the number in OPF:
+#### Reading time hint
 
-```html
-    <meta property="schema:wordCount">{{word_count}}</meta>
-```
+An average reading speed is 250 words per minute for an adult.
 
-### Reading time hint
+#### Words per page
 
-This can be calculated as a number of words divided by an average reading speed (250 words per minute for an adult).
-
-### Words per page
-
-In novels there are around 250-350 words per page.
-
-```html
-    <meta property="schema:numberOfPages">{{number_of_pages}}</meta>
-```
-
-## Asterism
-
-Due to poor Unicode and CSS support in most e-readers, I found that the best way to have safe and nice looking asterism is to use asterisk operator (U+2217) from the Unicode Math category. Tested on Kindle and Kobo:
-
-```html
-<div class="asterism large">∗ ∗ ∗</div>
-```
+In a novel there are around 250-350 words per page.
 
 ## Fonts
 
@@ -65,27 +66,38 @@ My favourite serif fonts for long reading:
 - [Crimson Pro](https://fontsarena.com/crimson-pro-by-sebastian-kosch-jacques-le-bailly/) – Sebastian Kosch & Jacques Le Bailly (free).
 - [Georgia](https://docs.microsoft.com/typography/font-list/georgia) – Classic font from Microsoft.
 - [EB Garamond](https://github.com/octaviopardo/EBGaramond12) - Old looking font (free).
+- Others: Arno, Warnock, Minion, STIX
 
 ## Common sections (epub:type) reference:
 
-- frontmatter: `titlepage`, `halftitlepage`, `seriespage`, `acknowledgments`, `contributors`, `dedication`
-- bodymatter: `foreword`, `abstract`, `preface`, `preamble`, `introduction`, `epigraph`, `prologue`, `part`, `chapter`, `epilogue`, `conclusion`, `afterword`
-- notes: `footnote(s)`, `endnote(s)`, `noteref`, `backlink`
-- backmatter: `appendix`, `bibliography`, `glossary`
+| frontmatter     | bodymatter   | backmatter   | notes       |
+| --------------- | ------------ | ------------ | ----------- |
+| titlepage       | foreword     | appendix     | footnote(s) |
+| halftitlepage   | abstract     | bibliography | endnote(s)  |
+| acknowledgments | preface      | glossary     | noteref     |
+| contributors    | preamble     | seriespage   | backlink    |
+| toc             | introduction |              |             |
+| dedication      | epigraph     |              |             |
+|                 | prologue     |              |             |
+|                 | part         |              |             |
+|                 | chapter      |              |             |
+|                 | epilogue     |              |             |
+|                 | conclusion   |              |             |
+|                 | afterword    |              |             |
 
-### foreword, preface and introduction (epub:type)
+Full rerefence: [EPUB Structural Semantics Vocabulary](http://www.idpf.org/epub/vocab/structure/).
+
+#### foreword, preface and introduction
 
 - A foreword is written by someone other than the author and tells the readers why they should read the book.
 - A preface is written by the author and tells readers how and why the book came into being.
 - An introduction introduces readers to the main topics of the manuscript and prepares readers for what they can expect.
 
-## EPUB packaging script
-
-I have created a PowerShell script (command line) to build epub package file from a given directory. It uses [`7za`](https://www.7-zip.org/download.html) and optionally [`kindlegen`](https://www.amazon.com/kindleformat/kindlegen) to create `mobi` format as well, and it's available here: [create-epub.ps1](https://gist.github.com/spajak/a6699005d9648696fbdda1d545153a38).
-
 ## Useful links
 
 - [EPUB Packages 3.2](https://www.w3.org/publishing/epub32/epub-packages.html)
 - [EPUB Content Documents 3.2](https://www.w3.org/publishing/epub32/epub-contentdocs.html)
-- [EPUB Structural Semantics Vocabulary](https://idpf.github.io/epub-vocabs/structure/)
+- [EPUB Structural Semantics Vocabulary](http://www.idpf.org/epub/vocab/structure/)
 - [DCMI Metadata Terms](http://www.dublincore.org/specifications/dublin-core/dcmi-terms/)
+- [MARC Code List for Relators](https://www.loc.gov/marc/relators/relaterm.html)
+- [BISAC Subject Headings](https://bisg.org/page/bisacedition)

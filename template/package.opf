@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://www.idpf.org/2007/opf" unique-identifier="pub-id" version="3.0">
+    <metadata xmlns:dc="http://purl.org/dc/elements/1.1/">
+        <dc:identifier id="pub-id">urn:uuid:00000000-0000-0000-0000-000000000000</dc:identifier>
+        <meta property="dcterms:modified">2019-07-25T18:00:00Z</meta>
+        <dc:source>https://en.wikipedia.org/wiki/EPUB</dc:source>
+        <dc:language>en</dc:language>
+        <dc:title id="title">The Book's Title</dc:title>
+            <meta refines="#title" property="title-type">main</meta>
+            <meta refines="#title" property="file-as">Book's Title, The</meta>
+            <meta refines="#title" property="alternate-script" xml:lang="pl">Tytuł książki w innym języku</meta>
+        <dc:title id="subtitle">Secondary Title</dc:title>
+            <meta refines="#subtitle" property="title-type">subtitle</meta>
+        <dc:creator id="creator">The Book's Author</dc:creator>
+            <meta refines="#creator" property="role" scheme="marc:relators">aut</meta>
+            <meta refines="#creator" property="file-as">Author, The Book's</meta>
+        <dc:description xml:lang="en">Very good book about everything what is in The Universe</dc:description>
+        <dc:description xml:lang="pl">Świetna książka o wszystkich rzeczach we Wszechświecie</dc:description>
+        <dc:subject>Novel</dc:subject>
+        <dc:subject>Dark Ages</dc:subject>
+        <dc:subject id="bisac1">FICTION / Literary</dc:subject>
+            <meta refines="#bisac1" property="authority">BISAC</meta>
+            <meta refines="#bisac1" property="term">FIC019000</meta>
+        <meta id="series" property="belongs-to-collection">My Books Collection</meta>
+            <meta refines="#series" property="collection-type">series</meta>
+            <meta refines="#series" property="group-position">1</meta>
+            <meta refines="#series" property="dcterms:identifier">my-id</meta>
+        <dc:publisher>Self-publishing</dc:publisher>
+        <dc:date>2017-03-01</dc:date>
+        <dc:identifier>urn:isbn:0000000000000</dc:identifier>
+        <dc:identifier>urn:goodreads:00000</dc:identifier>
+        <dc:identifier>urn:lubimyczytac:00000</dc:identifier>
+        <dc:identifier>https://github.com/spajak/epub3-boilerplate</dc:identifier>
+        <meta property="schema:numberOfPages">10</meta>
+        <meta property="schema:wordCount">100</meta>
+        <!-- Person who translated this book -->
+        <dc:contributor id="translator">Joe Translator</dc:contributor>
+            <meta refines="#translator" property="role" scheme="marc:relators">trl</meta>
+        <!-- The person who created this e-book package -->
+        <dc:contributor id="producer">Sebastian Pająk</dc:contributor>
+            <meta refines="#producer" property="role" scheme="marc:relators">bkp</meta>
+        <!-- Legacy cover -->
+        <meta name="cover" content="cover.jpg"/>
+    </metadata>
+    <manifest>
+        <item href="Content/images/cover.jpg" id="cover.jpg" media-type="image/jpeg" properties="cover-image"/>
+        <item href="Content/cover.xhtml" id="cover" media-type="application/xhtml+xml"/>
+        <item href="Content/titlepage.xhtml" id="titlepage" media-type="application/xhtml+xml"/>
+        <item href="Content/toc.xhtml" id="toc" media-type="application/xhtml+xml" properties="nav"/>
+        <item href="Content/ch01.xhtml" id="ch01" media-type="application/xhtml+xml"/>
+        <item href="Content/ch02.xhtml" id="ch02" media-type="application/xhtml+xml"/>
+        <item href="Content/ch03.xhtml" id="ch03" media-type="application/xhtml+xml"/>
+        <item href="Content/epilogue.xhtml" id="epilogue" media-type="application/xhtml+xml"/>
+        <item href="Content/images/book.png" id="book.png" media-type="image/png"/>
+        <item href="Content/style/base.css" id="base.css" media-type="text/css"/>
+        <item href="Content/style/titlepage.css" id="titlepage.css" media-type="text/css"/>
+        <item href="Content/style/main.css" id="main.css" media-type="text/css"/>
+        <item href="Content/style/cover.css" id="cover.css" media-type="text/css"/>
+        <!-- Legacy toc -->
+        <item href="toc.ncx" id="ncx" media-type="application/x-dtbncx+xml"/>
+    </manifest>
+    <spine toc="ncx">
+        <itemref idref="cover"/>
+        <itemref idref="titlepage"/>
+        <itemref idref="toc"/>
+        <itemref idref="ch01"/>
+        <itemref idref="ch02"/>
+        <itemref idref="ch03"/>
+        <itemref idref="epilogue"/>
+    </spine>
+</package>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<ncx xmlns="http://www.daisy.org/z3986/2005/ncx/" version="2005-1">
+<head>
+    <meta content="urn:uuid:00000000-0000-0000-0000-000000000000" name="dtb:uid"/>
+    <meta content="1" name="dtb:depth"/>
+    <meta content="0" name="dtb:totalPageCount"/>
+    <meta content="0" name="dtb:maxPageNumber"/>
+</head>
+<docTitle><text>The Book's Title</text></docTitle>
+<docAuthor><text>The Book's Author</text></docAuthor>
+<navMap>
+    <navPoint id="nav-cover">
+        <navLabel><text>Cover</text></navLabel>
+        <content src="Content/cover.xhtml"/>
+    </navPoint>
+    <navPoint id="nav-1">
+        <navLabel><text>Chapter I</text></navLabel>
+        <content src="Content/ch01.xhtml"/>
+    </navPoint>
+    <navPoint id="nav-2">
+        <navLabel><text>Chapter II</text></navLabel>
+        <content src="Content/ch02.xhtml"/>
+    </navPoint>
+    <navPoint id="nav-3">
+        <navLabel><text>Chapter III</text></navLabel>
+        <content src="Content/ch03.xhtml"/>
+    </navPoint>
+    <navPoint id="nav-epilogue">
+        <navLabel><text>Epilogue</text></navLabel>
+        <content src="Content/epilogue.xhtml"/>
+    </navPoint>
+</navMap>
+</ncx>

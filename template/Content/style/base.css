@@ -19,7 +19,11 @@ section {
     display: block;
 }
 
-/* ------- Sections ----------------------------------------------------------*/
+[hidden] {
+    display: none;
+}
+
+/* ------------ Sections ---------------------------------------------------- */
 body {
     font-size: 100%;
     font-weight: normal;
@@ -50,7 +54,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-    font-size: 1.875em;
+    font-size: 2em;
 }
 
 h2 {
@@ -66,7 +70,7 @@ h3 {
 
 h4 {
     font-size: 1.125em;
-    margin-bottom: 1rem;
+    margin-bottom: 1em;
 }
 
 h5, h6 {
@@ -79,9 +83,30 @@ h6 {
     font-style: italic;
 }
 
-/* ------- Content grouping ------------------------------------------------- */
-p {
-    margin: 1em 0;
+/* ------------ Content grouping -------------------------------------------- */
+p, blockquote, figure, ol, ul, dl, pre {
+    margin-top: 1em;
+    margin-bottom: 1em;
+    text-indent: 0;
+}
+
+p.classic,
+p.book,
+p.novel {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+p + p.classic,
+p + p.book,
+p + p.novel {
+    text-indent: 1.125em;
+}
+
+p.stanza, p.verses, p.verse, p.poetry {
+    margin-top: 1em;
+    margin-bottom: 1em;
+    text-align: left;
     text-indent: 0;
 }
 
@@ -90,7 +115,7 @@ blockquote {
     margin-left: 0;
     margin-right: 0;
     border: 0 none;
-    border-left: 0.1875rem solid #808080;
+    border-left: 0.1875rem solid #888;
 }
 
 blockquote.fancy {
@@ -100,88 +125,15 @@ blockquote.fancy {
 }
 
 figure {
-    margin: 1rem 0;
     padding: 0;
     text-align: center;
+    page-break-inside: avoid;
 }
 
 figcaption {
-    margin: 0.25rem auto;
-    font-size: 0.875rem;
+    margin: 0.25em auto;
+    font-size: 0.875em;
     text-align: center;
-}
-
-ol, ul, dl, pre {
-    margin: 1rem 0;
-}
-
-ul, ol {
-    padding-left: 2.5em;
-    list-style-position: outside;
-}
-
-ul {
-    padding-left: 2em;
-    list-style-type: disc;
-}
-
-ul ul {
-    list-style-type: circle;
-}
-
-ol {
-    list-style-type: decimal;
-}
-
-ol.roman {
-    list-style-type: lower-roman;
-}
-
-ol.upper-roman {
-    list-style-type: upper-roman;
-}
-
-ol.latin {
-    list-style-type: lower-latin;
-}
-
-ol.upper-latin {
-    list-style-type: upper-latin;
-}
-
-li > ol, li > ul {
-    margin-top: 0;
-    margin-bottom: 0;
-}
-
-ol.off, ul.off, li.off {
-    list-style-type: none;
-    padding: 0;
-    margin-left: 0;
-}
-
-dt {
-    font-weight: bold;
-    text-align: left;
-}
-
-dt:after {
-    content: ": ";
-}
-
-dd {
-    padding: 0;
-    margin: 0;
-    margin-left: 24pt;
-}
-
-pre {
-    tab-size: 2;
-    text-align: left;
-    display: block;
-    white-space: pre-wrap;
-    font-size: 0.8125em;
-    line-height: 1.25;
 }
 
 hr {
@@ -195,8 +147,97 @@ hr {
     page-break-after: avoid;
 }
 
-[hidden] {
-    display: none;
+pre {
+    tab-size: 2;
+    text-align: left;
+    display: block;
+    white-space: pre-wrap;
+    font-size: 0.8125em;
+    line-height: 1.25;
+}
+
+/** Lists **/
+ul, ol {
+    text-align: initial;
+    margin-left: 0;
+    margin-right: 0;
+    list-style-position: outside;
+}
+
+ol {
+    padding-left: 34pt;
+    list-style-type: decimal;
+}
+
+ul {
+    padding-left: 26pt;
+    list-style-type: disc;
+}
+
+ul ul {
+    list-style-type: circle;
+}
+
+li ol, li ul {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+ol.off, ul.off {
+    padding-left: 0;
+    list-style-type: none;
+}
+
+li.off {
+    list-style-type: none;
+}
+
+ol.narrow, ol.tight {
+    padding-left: 28pt;
+}
+
+ul.narrow, ul.tight {
+    padding-left: 22pt;
+}
+
+ol.wide {
+    padding-left: 50pt;
+}
+
+ul.wide {
+    padding-left: 38pt;
+}
+
+ol.roman {
+    list-style-type: lower-roman;
+}
+
+ol.upper-roman, ol.u-roman {
+    list-style-type: upper-roman;
+}
+
+ol.latin {
+    list-style-type: lower-latin;
+}
+
+ol.upper-latin, ol.u-latin {
+    list-style-type: upper-latin;
+}
+
+dt {
+    font-weight: bold;
+    text-align: left;
+}
+
+dt::after {
+    content: ": ";
+}
+
+dd {
+    padding: 0;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 26pt;
 }
 
 /* Kindle specific */
@@ -206,11 +247,99 @@ hr {
     }
 
     dd {
-        margin-left: 32pt;
+        padding-left: 30pt;
     }
 }
 
-/* ------- Text (inline) -----------------------------------------------------*/
+/* ------------ Tables ------------------------------------------------------ */
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    border: 0 none;
+    padding: 0;
+    width: auto;
+    max-width: 100%;
+    text-align: left;
+    margin: 1rem auto;
+    page-break-inside: avoid;
+    font-feature-settings: "tnum" 1;
+    font-variant-numeric: tabular-nums;
+}
+
+table.fixed {
+    table-layout: fixed;
+}
+
+th {
+    padding: 0.3125rem 6pt 0.4375rem 0;
+    border-bottom: 0.125rem solid currentColor;
+}
+
+th.v {
+    border-right: 0.125rem solid currentColor;
+    text-align: left;
+}
+
+td, th.v {
+    padding: 0.25rem 6pt 0.25rem 0;
+    border-bottom: 0.0625rem solid currentColor;
+}
+
+td, th {
+    empty-cells: show;
+    vertical-align: baseline;
+}
+
+table.grid {
+    border: 0.125rem solid currentColor;
+}
+
+table.grid th {
+    padding: 0.4375rem 4pt;
+    border: 0.125rem solid currentColor;
+}
+
+table.grid td {
+    padding: 0.25rem 4pt;
+    border: 0.0625rem solid currentColor;
+}
+
+/* <caption> must be the first element in <table> */
+caption {
+    font-size: 0.875rem;
+    margin: 0.25rem auto;
+    text-align: center;
+}
+
+/* Kindle: setting caption-side breaks "Enhanced Typesetting"! */
+caption.top {
+    caption-side: top;
+}
+
+caption.bottom {
+    caption-side: bottom;
+}
+
+@media only amzn-kf8, amzn-mobi {
+    td, th {
+        padding-right: 10pt;
+    }
+
+    table.grid th, table.grid td {
+        padding-left: 6pt;
+        padding-right: 6pt;
+    }
+}
+
+/* ------------ Image ------------------------------------------------------- */
+img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    vertical-align: bottom;
+}
+
+/* ------------ Text -------------------------------------------------------- */
 /*
     <em>      - stress emphasis
     <strong>  - strong importance, seriousness, or urgency
@@ -272,104 +401,14 @@ code {
     font-family: monospace;
 }
 
-/* ---------- Image (inline) ------------------------------------------------ */
-img {
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: contain;
-    vertical-align: bottom;
-}
-
-/* ---------- Tables -------------------------------------------------------- */
-table {
-    border-collapse: collapse;
-    border-spacing: 0;
-    border: 0 none;
-    padding: 0;
-    width: auto;
-    max-width: 100%;
-    text-align: left;
-    margin: 1rem auto;
-    page-break-inside: avoid;
-    font-feature-settings: "tnum" 1;
-    font-variant-numeric: tabular-nums;
-}
-
-table.fixed {
-    table-layout: fixed;
-}
-
-th {
-    padding: 0.3125rem 6pt 0.4375rem 0;
-    border-bottom: 0.125rem solid currentColor;
-}
-
-th.v {
-    border-right: 0.125rem solid currentColor;
-    text-align: left;
-}
-
-td, th.v {
-    padding: 0.25rem 6pt 0.25rem 0;
-    border-bottom: 0.0625rem solid currentColor;
-}
-
-td, th {
-    empty-cells: show;
-    vertical-align: baseline;
-}
-
-@media only amzn-kf8, amzn-mobi {
-    td, th {
-        padding-right: 10pt;
-    }
-}
-
-/* --------- Table caption -------------------------------------------------- */
-/* <caption> must be the first element in <table> */
-caption {
-    font-size: 0.875rem;
-    margin: 0.25rem auto;
-    text-align: center;
-}
-
-/* Kindle: setting caption-side breaks "Enhanced Typesetting"! */
-caption.top {
-    caption-side: top;
-}
-
-caption.bottom {
-    caption-side: bottom;
-}
-
-/* --------- Grid table class ----------------------------------------------- */
-table.grid {
-    border: 0.125rem solid currentColor;
-}
-
-table.grid th {
-    padding: 0.4375rem 4pt;
-    border: 0.125rem solid currentColor;
-}
-
-table.grid td {
-    padding: 0.25rem 4pt;
-    border: 0.0625rem solid currentColor;
-}
-
-@media only amzn-kf8, amzn-mobi {
-    table.grid th, table.grid td {
-        padding-left: 6pt;
-        padding-right: 6pt;
-    }
-}
-
-/* --------- Utility classes ------------------------------------------------ */
+/* ------------ Utility classes --------------------------------------------- */
 .asterism {
     display: block;
     text-align: center;
     line-height: 1.2;
     margin: 1.75em 0;
+    min-height: 0.125em;
+    text-indent: 0;
 }
 
 .noteref {
@@ -382,16 +421,40 @@ table.grid td {
 }
 
 .box {
-    margin: 1rem auto;
+    margin: 1em auto;
     width: auto;
     padding: 0.625rem 12pt;
     border: 0.125rem solid currentColor;
 }
 
-.classic {
-    text-indent: 1.25em;
-    margin-top: 0;
-    margin-bottom: 0;
+.excerpt {
+    padding-left: 8%;
+    padding-right: 8%;
+    text-indent: 0;
+}
+
+.indent {
+    text-indent: 1.125em;
+}
+
+.no-indent {
+    text-indent: 0;
+}
+
+.brb {
+    page-break-before: always;
+}
+
+.no-brb {
+    page-break-before: avoid;
+}
+
+.bra {
+    page-break-after: always;
+}
+
+.no-bra {
+    page-break-after: avoid;
 }
 
 .mt-0, .m-0 {
@@ -436,25 +499,14 @@ table.grid td {
     margin-bottom: 0.5em;
 }
 
+.m-1-4 {
+    margin-top: 0.25em;
+    margin-bottom: 0.25em;
+}
+
 .m-s-3, .m-1-5 {
     margin-top: 0.2em;
     margin-bottom: 0.2em;
-}
-
-.brb {
-    page-break-before: always;
-}
-
-.no-brb {
-    page-break-before: avoid;
-}
-
-.bra {
-    page-break-after: always;
-}
-
-.no-bra {
-    page-break-after: avoid;
 }
 
 .i {
@@ -505,20 +557,12 @@ table.grid td {
     font-size: 1.75em;
 }
 
-.indent {
-    text-indent: 1.25em;
-}
-
-.no-indent {
-    text-indent: 0;
-}
-
-.pad {
-    padding-left: 24pt;
-}
-
 .upper, .u {
     text-transform: uppercase;
+}
+
+.underline, .uln {
+    text-decoration: underline solid;
 }
 
 .caps {
@@ -532,12 +576,9 @@ table.grid td {
 .reset {
     font-style: normal;
     font-weight: normal;
+    font-variant: normal;
     text-transform: initial;
-}
-
-.m-auto {
-    margin-left: auto;
-    margin-right: auto;
+    text-decoration: initial;
 }
 
 .w-100 { width: 100%; }
@@ -549,3 +590,44 @@ table.grid td {
 .w-40  { width: 40%;  }
 .w-30  { width: 30%;  }
 .w-20  { width: 20%;  }
+
+.m-auto {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.pad {
+    padding-left: 28pt;
+}
+
+.pad-5 {
+    padding-left: 5%;
+}
+
+.pad-8 {
+    padding-left: 8%;
+}
+
+.pad-10 {
+    padding-left: 10%;
+}
+
+.pad-15 {
+    padding-left: 15%;
+}
+
+.pad-20 {
+    padding-left: 20%;
+}
+
+.pad-25 {
+    padding-left: 25%;
+}
+
+.pad-30 {
+    padding-left: 30%;
+}
+
+.pad-35 {
+    padding-left: 35%;
+}

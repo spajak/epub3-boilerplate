@@ -1,0 +1,12 @@
+body, div, img {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+img {
+    height: 100%;
+    border: 0 none;
+    vertical-align: bottom;
+    object-fit: contain;
+}
