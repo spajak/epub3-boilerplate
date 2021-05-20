@@ -557,11 +557,11 @@ code {
     font-size: 1.75em;
 }
 
-.upper, .u {
+.upper {
     text-transform: uppercase;
 }
 
-.underline, .uln {
+.underline, .u {
     text-decoration: underline solid;
 }
 

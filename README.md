@@ -2,9 +2,9 @@
 
 [EPUB version 3.2](https://www.w3.org/publishing/epub32/epub-spec.html) template, including simplistic, yet universal `css` stylesheet.
 
-## Build EPUB file
+## Building EPUB file
 
-I use my [PowerShell](https://github.com/PowerShell/PowerShell) script [build-epub.ps1](https://gist.github.com/spajak/a6699005d9648696fbdda1d545153a38) to build an epub package file from a given source directory. In order to do so place the script in PATH and execute this command from a PowerShell to build "template.epub" from the template:
+I made a [PowerShell](https://github.com/PowerShell/PowerShell) script [build-epub.ps1](https://gist.github.com/spajak/a6699005d9648696fbdda1d545153a38) to build an epub package file from a given source directory. In order to do so place the script in PATH and execute this command from a PowerShell to build "template.epub" from the template:
 
 ```
 $ build-epub.ps1 ".\template"
@@ -28,7 +28,7 @@ Kindle does not support EPUB e-books yet. Using [kindlegen](https://www.amazon.c
 
 ### Validation
 
-Always validate a resulting EPUB (.epub) file with [epubcheck](https://github.com/w3c/epubcheck):
+Always validate resulting EPUB (.epub) file with [epubcheck](https://github.com/w3c/epubcheck):
 
 ```
 $ java -jar "/path/to/epubcheck.jar" "template.epub"
@@ -36,7 +36,7 @@ $ java -jar "/path/to/epubcheck.jar" "template.epub"
 
 ## Words per page & word count metadata
 
-I use schema.org [numberOfPages](https://schema.org/numberOfPages) and [wordCount](https://schema.org/wordCount) fields in package metadatada:
+I use schema.org [numberOfPages](https://schema.org/numberOfPages) and [wordCount](https://schema.org/wordCount) fields in package metadata:
 
 ```html
 <meta property="schema:numberOfPages">{{number_of_pages}}</meta>
@@ -49,13 +49,10 @@ To get the number of words from html source use the provided PHP script:
 $ php ./count-words.php "./template/Content/ch*.xhtml"
 ```
 
-#### Reading time hint
+#### Did you know?
 
-An average reading speed is 250 words per minute for an adult.
-
-#### Words per page
-
-In a novel there are around 250-350 words per page.
+* An average reading speed is 250 **words per minute** for an adult.
+* In a novel there are around 250-350 **words per page**.
 
 ## Fonts
 
@@ -68,15 +65,15 @@ My favourite serif fonts for long reading:
 - [EB Garamond](https://github.com/octaviopardo/EBGaramond12) - Old looking font (free).
 - Others: Arno, Warnock, Minion, STIX
 
-## Common sections (epub:type) reference:
+## Common sections (epub:type) quick reference
 
 | frontmatter     | bodymatter   | backmatter   | notes       |
 | --------------- | ------------ | ------------ | ----------- |
 | titlepage       | foreword     | appendix     | footnote(s) |
-| halftitlepage   | abstract     | bibliography | endnote(s)  |
-| acknowledgments | preface      | glossary     | noteref     |
-| contributors    | preamble     | seriespage   | backlink    |
-| toc             | introduction |              |             |
+| halftitlepage   | abstract     | endnote(s)   | noteref     |
+| acknowledgments | preface      | glossary     | backlink    |
+| contributors    | preamble     | bibliography |             |
+| toc             | introduction | seriespage   |             |
 | dedication      | epigraph     |              |             |
 |                 | prologue     |              |             |
 |                 | part         |              |             |
@@ -87,7 +84,7 @@ My favourite serif fonts for long reading:
 
 Full rerefence: [EPUB Structural Semantics Vocabulary](http://www.idpf.org/epub/vocab/structure/).
 
-#### foreword, preface and introduction
+#### The difference between foreword, preface and introduction
 
 - A foreword is written by someone other than the author and tells the readers why they should read the book.
 - A preface is written by the author and tells readers how and why the book came into being.

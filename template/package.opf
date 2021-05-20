@@ -44,6 +44,10 @@
     </metadata>
     <manifest>
         <item href="Content/images/cover.jpg" id="cover.jpg" media-type="image/jpeg" properties="cover-image"/>
+        <item href="Content/style/base.css" id="base.css" media-type="text/css"/>
+        <item href="Content/style/titlepage.css" id="titlepage.css" media-type="text/css"/>
+        <item href="Content/style/main.css" id="main.css" media-type="text/css"/>
+        <item href="Content/style/cover.css" id="cover.css" media-type="text/css"/>
         <item href="Content/cover.xhtml" id="cover" media-type="application/xhtml+xml"/>
         <item href="Content/titlepage.xhtml" id="titlepage" media-type="application/xhtml+xml"/>
         <item href="Content/toc.xhtml" id="toc" media-type="application/xhtml+xml" properties="nav"/>
@@ -52,10 +56,6 @@
         <item href="Content/ch03.xhtml" id="ch03" media-type="application/xhtml+xml"/>
         <item href="Content/epilogue.xhtml" id="epilogue" media-type="application/xhtml+xml"/>
         <item href="Content/images/book.png" id="book.png" media-type="image/png"/>
-        <item href="Content/style/base.css" id="base.css" media-type="text/css"/>
-        <item href="Content/style/titlepage.css" id="titlepage.css" media-type="text/css"/>
-        <item href="Content/style/main.css" id="main.css" media-type="text/css"/>
-        <item href="Content/style/cover.css" id="cover.css" media-type="text/css"/>
         <!-- Legacy toc -->
         <item href="toc.ncx" id="ncx" media-type="application/x-dtbncx+xml"/>
     </manifest>
