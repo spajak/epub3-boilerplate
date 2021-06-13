@@ -1,8 +1,8 @@
 @charset "UTF-8";
 
 @page {
-    margin-left: 4mm;
-    margin-right: 4mm;
+    margin-left: 10pt;
+    margin-right: 10pt;
     padding: 0;
 }
 
@@ -64,7 +64,7 @@ h2 {
 
 h3 {
     font-size: 1.375em;
-    margin-top: 2.25em;
+    margin-top: 2em;
     margin-bottom: 1.25em;
 }
 
@@ -111,17 +111,31 @@ p.stanza, p.verses, p.verse, p.poetry {
 }
 
 blockquote {
-    padding-left: 10pt;
+    padding-left: 18pt;
+    padding-right: 18pt;
     margin-left: 0;
     margin-right: 0;
-    border: 0 none;
-    border-left: 0.1875rem solid #888;
 }
 
 blockquote.fancy {
-    padding-right: 4%;
-    padding-left: 1rem;
+    padding-left: 10pt;
+    padding-right: 16pt;
     border-left: 0.875rem solid #9F9F9F;
+}
+
+dt {
+    font-weight: bold;
+    text-align: left;
+    page-break-after: avoid;
+}
+
+dd {
+    padding: 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 0.25em;
+    padding-left: 22pt;
+    page-break-before: avoid;
 }
 
 figure {
@@ -132,6 +146,7 @@ figure {
 
 figcaption {
     margin: 0.25em auto;
+    line-height: 1.25;
     font-size: 0.875em;
     text-align: center;
 }
@@ -142,7 +157,7 @@ hr {
     padding: 0;
     border: 0 none;
     border-top: 0.125rem solid currentColor;
-    margin: 1.5rem auto;
+    margin: 1.5em auto;
     text-align: center;
     page-break-after: avoid;
 }
@@ -156,22 +171,30 @@ pre {
     line-height: 1.25;
 }
 
-/** Lists **/
+/* Kindle specific */
+@media only amzn-kf8, amzn-mobi {
+
+}
+
+/* ------------ Lists ------------------------------------------------------- */
 ul, ol {
     text-align: initial;
-    margin-left: 0;
-    margin-right: 0;
     list-style-position: outside;
+    margin-left: 0;
 }
 
 ol {
-    padding-left: 34pt;
     list-style-type: decimal;
+    padding-left: 34pt;
+}
+
+ol.wide {
+    padding-left: 44pt;
 }
 
 ul {
-    padding-left: 26pt;
     list-style-type: disc;
+    padding-left: 24pt;
 }
 
 ul ul {
@@ -181,31 +204,11 @@ ul ul {
 li ol, li ul {
     margin-top: 0;
     margin-bottom: 0;
+    padding-left: 24pt;
 }
 
-ol.off, ul.off {
-    padding-left: 0;
-    list-style-type: none;
-}
-
-li.off {
-    list-style-type: none;
-}
-
-ol.narrow, ol.tight {
-    padding-left: 28pt;
-}
-
-ul.narrow, ul.tight {
-    padding-left: 22pt;
-}
-
-ol.wide {
-    padding-left: 50pt;
-}
-
-ul.wide {
-    padding-left: 38pt;
+li ul {
+    padding-left: 16pt;
 }
 
 ol.roman {
@@ -224,38 +227,43 @@ ol.upper-latin, ol.u-latin {
     list-style-type: upper-latin;
 }
 
-dt {
-    font-weight: bold;
-    text-align: left;
+ol.loose > li, ul.loose > li, ol.spread > li, ul.spread > li {
+    margin-top: 0.75em;
+    margin-bottom: 0.75em;
 }
 
-dt::after {
-    content: ": ";
+ol.off, ul.off, li.off, ul.dash, ul.pseudo-dash {
+    list-style-type: none;
 }
 
-dd {
-    padding: 0;
-    margin-left: 0;
-    margin-right: 0;
-    padding-left: 26pt;
+ul.dash, ul.pseudo-dash {
+    padding-left: 12pt;
+}
+
+/* "– " = 0.75em */
+ul.dash > li, ul.pseudo-dash > li {
+    text-indent: -0.75em;
+    padding-left: 0.75em;
+}
+
+ul.pseudo-dash > li::before, ul.pseudo-dash > li:before {
+    content: "\2013\2005"; /* en space + 1/4 em space = 0.75em; en = 1/2 em */
+    font-size: 100%;
+    text-indent: 0;
 }
 
 /* Kindle specific */
 @media only amzn-kf8, amzn-mobi {
-    blockquote {
-        padding-left: 14pt;
-    }
-
-    dd {
-        padding-left: 30pt;
+    ol {
+        padding-left: 36pt;
     }
 }
 
 /* ------------ Tables ------------------------------------------------------ */
 table {
+    border: 0 none currentColor;
     border-collapse: collapse;
     border-spacing: 0;
-    border: 0 none;
     padding: 0;
     width: auto;
     max-width: 100%;
@@ -270,38 +278,45 @@ table.fixed {
     table-layout: fixed;
 }
 
-th {
-    padding: 0.3125rem 6pt 0.4375rem 0;
-    border-bottom: 0.125rem solid currentColor;
+td, th {
+    padding-left: 0;
+    padding-right: 6pt;
+    empty-cells: show;
+    vertical-align: baseline;
+    border: 0 none currentColor;
+    border-bottom-style: solid;
 }
 
-th.v {
-    border-right: 0.125rem solid currentColor;
-    text-align: left;
+th {
+    padding-top: 3pt;
+    padding-bottom: 5pt;
+    border-bottom-width: 0.125rem;
 }
 
 td, th.v {
-    padding: 0.25rem 6pt 0.25rem 0;
-    border-bottom: 0.0625rem solid currentColor;
+    padding-top: 4pt;
+    padding-bottom: 4pt;
+    border-bottom-width: 0.0625rem;
 }
 
-td, th {
-    empty-cells: show;
-    vertical-align: baseline;
+th.v {
+    border-right-width: 0.125rem;
+    text-align: left;
 }
 
-table.grid {
-    border: 0.125rem solid currentColor;
+table.grid, table.grid th {
+    border-style: solid;
+    border-width: 0.125rem;
 }
 
 table.grid th {
-    padding: 0.4375rem 4pt;
-    border: 0.125rem solid currentColor;
+    padding: 4pt;
 }
 
 table.grid td {
-    padding: 0.25rem 4pt;
-    border: 0.0625rem solid currentColor;
+    padding: 3pt 4pt;
+    border-style: solid;
+    border-width: 0.0625rem;
 }
 
 /* <caption> must be the first element in <table> */
@@ -309,6 +324,7 @@ caption {
     font-size: 0.875rem;
     margin: 0.25rem auto;
     text-align: center;
+    line-height: 1.25;
 }
 
 /* Kindle: setting caption-side breaks "Enhanced Typesetting"! */
@@ -320,15 +336,9 @@ caption.bottom {
     caption-side: bottom;
 }
 
+/* Kindle specific */
 @media only amzn-kf8, amzn-mobi {
-    td, th {
-        padding-right: 10pt;
-    }
 
-    table.grid th, table.grid td {
-        padding-left: 6pt;
-        padding-right: 6pt;
-    }
 }
 
 /* ------------ Image ------------------------------------------------------- */
@@ -423,14 +433,8 @@ code {
 .box {
     margin: 1em auto;
     width: auto;
-    padding: 0.625rem 12pt;
+    padding: 8pt 10pt;
     border: 0.125rem solid currentColor;
-}
-
-.excerpt {
-    padding-left: 8%;
-    padding-right: 8%;
-    text-indent: 0;
 }
 
 .indent {
@@ -533,15 +537,19 @@ code {
     text-align: justify;
 }
 
-.s-8750, .s-1, .small, .s {
+.s-9375, .s-15_16 { /* 15/16 */
+    font-size: 0.9375em;
+}
+
+.s-8750, .s-14_16, .s-1, .small, .s {
     font-size: 0.875em;
 }
 
-.s-8125, .s-2 {
+.s-8125, .s-13_16, .s-2 {
     font-size: 0.8125em;
 }
 
-.s-7500, .s-3 {
+.s-7500, .s-12_16, .s-3 {
     font-size: 0.75em;
 }
 
@@ -589,7 +597,7 @@ code {
 .w-50  { width: 50%;  }
 .w-40  { width: 40%;  }
 .w-30  { width: 30%;  }
-.w-20  { width: 20%;  }
+.w-25  { width: 25%;  }
 
 .m-auto {
     margin-left: auto;
@@ -597,7 +605,7 @@ code {
 }
 
 .pad {
-    padding-left: 28pt;
+    padding-left: 24pt;
 }
 
 .pad-5 {
