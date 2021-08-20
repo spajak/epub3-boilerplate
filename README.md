@@ -4,7 +4,7 @@
 
 ## Building EPUB file
 
-I made a [PowerShell](https://github.com/PowerShell/PowerShell) script [build-epub.ps1](https://gist.github.com/spajak/a6699005d9648696fbdda1d545153a38) to build an epub package file from a given source directory. In order to do so place the script in PATH and execute this command from a PowerShell to build "template.epub" from the template:
+I made a [PowerShell](https://github.com/PowerShell/PowerShell) script [build-epub.ps1](https://gist.github.com/spajak/a6699005d9648696fbdda1d545153a38) to build an epub package file from a given source directory. In order to do so, place the script in PATH and execute this command from a PowerShell to build "template.epub" from the template:
 
 ```
 $ build-epub.ps1 ".\template"
@@ -54,17 +54,6 @@ $ php ./count-words.php "./template/Content/ch*.xhtml"
 * An average reading speed is 250 **words per minute** for an adult.
 * In a novel there are around 250-350 **words per page**.
 
-## Fonts
-
-My favourite serif fonts for long reading:
-
-- Bookerly – Default Kindle font. This is the main reason *not* to embed any serif fonts in epub package, but to leave e-reader's default.
-- [Literata](https://github.com/googlefonts/literata) – Google font (free).
-- [Crimson Pro](https://fontsarena.com/crimson-pro-by-sebastian-kosch-jacques-le-bailly/) – Sebastian Kosch & Jacques Le Bailly (free).
-- [Georgia](https://docs.microsoft.com/typography/font-list/georgia) – Classic font from Microsoft.
-- [EB Garamond](https://github.com/octaviopardo/EBGaramond12) - Old looking font (free).
-- Others: Arno, Warnock, Minion, STIX
-
 ## Common sections (epub:type) quick reference
 
 | frontmatter     | bodymatter   | backmatter   | notes       |
@@ -83,6 +72,19 @@ My favourite serif fonts for long reading:
 |                 | afterword    |              |             |
 
 Full rerefence: [EPUB Structural Semantics Vocabulary](http://www.idpf.org/epub/vocab/structure/).
+
+## Fonts
+
+My favourite serif fonts for long reading:
+
+- Bookerly – Default Kindle font;
+- [Literata](https://github.com/googlefonts/literata) – Google font (free);
+- [Crimson Pro](https://fontsarena.com/crimson-pro-by-sebastian-kosch-jacques-le-bailly/) – Sebastian Kosch & Jacques Le Bailly (free);
+- [Newsreader](https://github.com/productiontype/Newsreader) – an original typeface designed by Production Type (free);
+- [Cochineal](https://ctan.org/pkg/cochineal) – a fork from the Crimson fonts (free);
+- [Source Serif](https://github.com/adobe-fonts/source-serif) – a free font from Adobe;
+- [Libertinus](https://github.com/alerque/libertinus) – a fork of Linux Libertine (free);
+- [Georgia](https://docs.microsoft.com/typography/font-list/georgia) – classic font from Microsoft;
 
 #### The difference between foreword, preface and introduction
 

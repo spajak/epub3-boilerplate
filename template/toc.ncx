@@ -29,5 +29,9 @@
         <navLabel><text>Epilogue</text></navLabel>
         <content src="Content/epilogue.xhtml"/>
     </navPoint>
+    <navPoint id="nav-glossary">
+        <navLabel><text>Glossary</text></navLabel>
+        <content src="Content/glossary.xhtml"/>
+    </navPoint>
 </navMap>
 </ncx>

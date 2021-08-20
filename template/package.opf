@@ -40,14 +40,15 @@
         <dc:contributor id="producer">Sebastian Pająk</dc:contributor>
             <meta refines="#producer" property="role" scheme="marc:relators">bkp</meta>
         <!-- Legacy cover -->
-        <meta name="cover" content="cover.jpg"/>
+        <meta name="cover" content="cover.image"/>
     </metadata>
     <manifest>
-        <item href="Content/images/cover.jpg" id="cover.jpg" media-type="image/jpeg" properties="cover-image"/>
+        <item href="Content/images/cover.jpg" id="cover.image" media-type="image/jpeg" properties="cover-image"/>
         <item href="Content/style/base.css" id="base.css" media-type="text/css"/>
-        <item href="Content/style/titlepage.css" id="titlepage.css" media-type="text/css"/>
-        <item href="Content/style/main.css" id="main.css" media-type="text/css"/>
         <item href="Content/style/cover.css" id="cover.css" media-type="text/css"/>
+        <item href="Content/style/frontmatter.css" id="frontmatter.css" media-type="text/css"/>
+        <item href="Content/style/bodymatter.css" id="bodymatter.css" media-type="text/css"/>
+        <item href="Content/style/backmatter.css" id="backmatter.css" media-type="text/css"/>
         <item href="Content/cover.xhtml" id="cover" media-type="application/xhtml+xml"/>
         <item href="Content/titlepage.xhtml" id="titlepage" media-type="application/xhtml+xml"/>
         <item href="Content/toc.xhtml" id="toc" media-type="application/xhtml+xml" properties="nav"/>
@@ -55,11 +56,12 @@
         <item href="Content/ch02.xhtml" id="ch02" media-type="application/xhtml+xml"/>
         <item href="Content/ch03.xhtml" id="ch03" media-type="application/xhtml+xml"/>
         <item href="Content/epilogue.xhtml" id="epilogue" media-type="application/xhtml+xml"/>
+        <item href="Content/glossary.xhtml" id="glossary" media-type="application/xhtml+xml"/>
         <item href="Content/images/book.png" id="book.png" media-type="image/png"/>
         <!-- Legacy toc -->
-        <item href="toc.ncx" id="ncx" media-type="application/x-dtbncx+xml"/>
+        <item href="toc.ncx" id="toc.ncx" media-type="application/x-dtbncx+xml"/>
     </manifest>
-    <spine toc="ncx">
+    <spine toc="toc.ncx">
         <itemref idref="cover"/>
         <itemref idref="titlepage"/>
         <itemref idref="toc"/>
@@ -67,5 +69,6 @@
         <itemref idref="ch02"/>
         <itemref idref="ch03"/>
         <itemref idref="epilogue"/>
+        <itemref idref="glossary"/>
     </spine>
 </package>

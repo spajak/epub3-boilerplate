@@ -1,6 +1,6 @@
 @charset "UTF-8";
 
-body, h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4 {
     text-align: center;
 }
 
@@ -20,4 +20,11 @@ body, h1, h2, h3, h4, h5, h6 {
     font-size: 1.125em;
     margin-top: 1em;
     margin-bottom: 2em;
+    text-align: center;
+}
+
+.chapter {
+    text-align: center;
+    margin-top: 1.125em;
+    margin-bottom: 1.75em;
 }

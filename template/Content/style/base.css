@@ -140,6 +140,8 @@ dd {
 
 figure {
     padding: 0;
+    margin-left: 0;
+    margin-right: 0;
     text-align: center;
     page-break-inside: avoid;
 }
@@ -255,7 +257,7 @@ ul.pseudo-dash > li::before, ul.pseudo-dash > li:before {
 /* Kindle specific */
 @media only amzn-kf8, amzn-mobi {
     ol {
-        padding-left: 36pt;
+        /*padding-left: 36pt;*/
     }
 }
 
