@@ -6,6 +6,7 @@ body, div, img {
 
 img {
     height: 100%;
+    max-width: 100%;
     border: 0 none;
     vertical-align: bottom;
     object-fit: contain;

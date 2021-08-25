@@ -36,9 +36,9 @@
         <!-- Person who translated this book -->
         <dc:contributor id="translator">Joe Translator</dc:contributor>
             <meta refines="#translator" property="role" scheme="marc:relators">trl</meta>
-        <!-- The person who created this e-book package -->
+        <!-- The person who created this e-book package; mrk - Markup editor, bkp - Book producer -->
         <dc:contributor id="producer">Sebastian Pająk</dc:contributor>
-            <meta refines="#producer" property="role" scheme="marc:relators">bkp</meta>
+            <meta refines="#producer" property="role" scheme="marc:relators">mrk</meta>
         <!-- Legacy cover -->
         <meta name="cover" content="cover.image"/>
     </metadata>
@@ -57,6 +57,7 @@
         <item href="Content/ch03.xhtml" id="ch03" media-type="application/xhtml+xml"/>
         <item href="Content/epilogue.xhtml" id="epilogue" media-type="application/xhtml+xml"/>
         <item href="Content/glossary.xhtml" id="glossary" media-type="application/xhtml+xml"/>
+        <item href="Content/landmarks.xhtml" id="landmarks" media-type="application/xhtml+xml"/>
         <item href="Content/images/book.png" id="book.png" media-type="image/png"/>
         <!-- Legacy toc -->
         <item href="toc.ncx" id="toc.ncx" media-type="application/x-dtbncx+xml"/>
@@ -69,6 +70,7 @@
         <itemref idref="ch02"/>
         <itemref idref="ch03"/>
         <itemref idref="epilogue"/>
-        <itemref idref="glossary"/>
+        <itemref idref="glossary" linear="no"/>
+        <itemref idref="landmarks" linear="no"/>
     </spine>
 </package>
